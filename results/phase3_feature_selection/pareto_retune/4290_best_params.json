@@ -1,0 +1,39 @@
+{
+  "subset_id": 4290,
+  "features": [
+    "CALI",
+    "CT",
+    "PEF",
+    "CPOR_SM"
+  ],
+  "cost": 16,
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": null,
+    "max_features": 0.5,
+    "min_samples_split": 4,
+    "min_samples_leaf": 3
+  },
+  "best_score": -0.6603278225006879,
+  "best_metrics": {
+    "RMSE": 189.97174364386754,
+    "MAE": 62.00741074510239,
+    "MedAE": 5.095529047586527,
+    "R2": 0.10511162074193674,
+    "RMSLE": 0.6603278225006879,
+    "RMSE_log": 0.6603278225006879,
+    "MAE_log": 0.5383916166194743,
+    "R2_log": 0.6835695016615299
+  },
+  "timing": {
+    "random_search_seconds": 893.5324687957764,
+    "bayesian_search_seconds": 667.234614610672,
+    "total_search_seconds": 1560.767085313797,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.7870649375915528,
+    "avg_trial_seconds_bayesian": 1.334469229221344,
+    "avg_trial_seconds_overall": 1.560767085313797
+  }
+}

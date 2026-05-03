@@ -1,0 +1,11 @@
+{
+  "mode": "validate",
+  "validation_model": "XGBoost",
+  "validation_variant": "dataset/prepared_variants/all_sources_with_outlier_default_linear.csv",
+  "cost_mode": "bundled",
+  "frontier_source": "retune",
+  "random_state": 20260211,
+  "n_pareto_subsets": 12,
+  "elapsed_seconds": 7.266089916229248,
+  "timestamp": "2026-04-15T08:02:39.294241"
+}

@@ -1,0 +1,38 @@
+{
+  "subset_id": 152,
+  "features": [
+    "RHOB",
+    "NPHI",
+    "PEF"
+  ],
+  "cost": 5,
+  "best_params": {
+    "n_estimators": 100,
+    "max_depth": 30,
+    "max_features": 0.5,
+    "min_samples_split": 10,
+    "min_samples_leaf": 5
+  },
+  "best_score": -0.8115748141532337,
+  "best_metrics": {
+    "RMSE": 197.24769188233466,
+    "MAE": 66.91538264943746,
+    "MedAE": 7.43534388691669,
+    "R2": 0.04998369097996701,
+    "RMSLE": 0.8115748141532337,
+    "RMSE_log": 0.8115748141532337,
+    "MAE_log": 0.6574205665323248,
+    "R2_log": 0.5064935436645142
+  },
+  "timing": {
+    "random_search_seconds": 886.7194831371307,
+    "bayesian_search_seconds": 913.0600867271423,
+    "total_search_seconds": 1799.7795724868774,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.7734389662742616,
+    "avg_trial_seconds_bayesian": 1.8261201734542847,
+    "avg_trial_seconds_overall": 1.7997795724868775
+  }
+}

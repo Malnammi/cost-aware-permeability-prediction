@@ -1,0 +1,36 @@
+{
+  "subset_id": 1,
+  "features": [
+    "GR"
+  ],
+  "cost": 1,
+  "best_params": {
+    "n_estimators": 100,
+    "max_depth": 5,
+    "max_features": 0.5,
+    "min_samples_split": 5,
+    "min_samples_leaf": 2
+  },
+  "best_score": -1.0357829939545982,
+  "best_metrics": {
+    "RMSE": 209.19313536421697,
+    "MAE": 71.47201079514453,
+    "MedAE": 7.9333883071800875,
+    "R2": -0.06889356211772989,
+    "RMSLE": 1.0357829939545982,
+    "RMSE_log": 1.0357829939545982,
+    "MAE_log": 0.8501416922410155,
+    "R2_log": 0.23144947706342436
+  },
+  "timing": {
+    "random_search_seconds": 710.7499241828918,
+    "bayesian_search_seconds": 733.7955062389374,
+    "total_search_seconds": 1444.5454325675964,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.4214998483657837,
+    "avg_trial_seconds_bayesian": 1.4675910124778748,
+    "avg_trial_seconds_overall": 1.4445454325675964
+  }
+}

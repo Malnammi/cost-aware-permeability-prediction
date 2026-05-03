@@ -1,0 +1,11 @@
+{
+  "mode": "retune",
+  "model": "ExtraTrees",
+  "variant": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
+  "cost_mode": "bundled",
+  "random_state": 20260211,
+  "hp_budget": 1000,
+  "n_pareto_subsets": 15,
+  "elapsed_seconds": 23488.26014995575,
+  "timestamp": "2026-04-15T08:02:25.843339"
+}
