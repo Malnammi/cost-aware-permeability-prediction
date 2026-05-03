@@ -1,0 +1,53 @@
+{
+  "outer_fold": "F",
+  "subset_id": 640,
+  "subset_label": "budget_wireline_only",
+  "features": [
+    "PEF",
+    "PHIT"
+  ],
+  "cost": 7,
+  "model": "ExtraTrees",
+  "variant": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
+  "hp_budget": 1000,
+  "search_timing": {
+    "random_search_seconds": 754.1180877685547,
+    "bayesian_search_seconds": 489.61918234825134,
+    "total_search_seconds": 1243.737272977829,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.5082361755371094,
+    "avg_trial_seconds_bayesian": 0.9792383646965027,
+    "avg_trial_seconds_overall": 1.2437372729778289
+  },
+  "inner_best_score": -0.8222821607407352,
+  "inner_best_metrics": {
+    "RMSE": 191.0090355640916,
+    "MAE": 65.1483322181228,
+    "MedAE": 8.920986503549367,
+    "R2": 0.05107115194033096,
+    "RMSLE": 0.8222821607407352,
+    "RMSE_log": 0.8222821607407352,
+    "MAE_log": 0.6711458315050719,
+    "R2_log": 0.4988489537400829
+  },
+  "outer_metrics": {
+    "RMSE": 241.52198337830828,
+    "MAE": 80.1061349499786,
+    "MedAE": 2.223823825510628,
+    "R2": 0.032468224037268345,
+    "RMSLE": 0.7445489186485992,
+    "RMSE_log": 0.7445489186485992,
+    "MAE_log": 0.591625658278126,
+    "R2_log": 0.5942405759391263
+  },
+  "best_params": {
+    "n_estimators": 100,
+    "max_depth": 20,
+    "max_features": 0.5,
+    "min_samples_split": 6,
+    "min_samples_leaf": 5
+  },
+  "timestamp": "2026-04-16T02:19:14.575316"
+}
