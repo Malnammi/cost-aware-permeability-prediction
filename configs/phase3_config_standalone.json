@@ -1,0 +1,58 @@
+{
+  "best_variant": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
+  "best_model": "ExtraTrees",
+  "best_params_path": "results/phase2_model_selection/hp_search/without_outlier_adaptive_ExtraTrees_best_params.json",
+
+  "validation_variant": "dataset/prepared_variants/all_sources_with_outlier_default_linear.csv",
+  "validation_model": "XGBoost",
+  "validation_params_path": "results/phase2_model_selection/hp_search/with_outlier_default_linear_XGBoost_best_params.json",
+
+  "feature_costs": {
+    "DEPTH":   0,
+    "GR":      1,
+    "CALI":    1,
+    "DRHO":    2,
+    "RHOB":    2,
+    "NPHI":    2,
+    "RT":      2,
+    "CT":      2,
+    "PEF":     3,
+    "MSFL":    3,
+    "PHIT":    4,
+    "DT":      5,
+    "SWT":     6,
+    "CPOR_SM": 10
+  },
+
+  "sweep_features": [
+    "GR", "CALI", "DRHO",
+    "RHOB", "NPHI", "RT", "CT",
+    "PEF", "MSFL", "PHIT", "DT",
+    "SWT", "CPOR_SM"
+  ],
+
+  "always_include": {
+    "categorical": ["Source", "Zone"],
+    "continuous": ["DEPTH"],
+    "binary": []
+  },
+
+  "feature_binary_map": {
+    "GR":      [],
+    "CALI":    [],
+    "DRHO":    [],
+    "RHOB":    [],
+    "NPHI":    [],
+    "RT":      ["RT_missing"],
+    "CT":      ["CT_missing"],
+    "PEF":     ["PEF_missing_source"],
+    "MSFL":    ["MSFL_missing_source"],
+    "PHIT":    [],
+    "DT":      ["DT_missing_source"],
+    "SWT":     ["SWT_missing"],
+    "CPOR_SM": []
+  },
+
+  "random_state": 20260211,
+  "retune_hp_budget": 1000
+}

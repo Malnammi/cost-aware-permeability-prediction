@@ -1,0 +1,63 @@
+{
+  "target_label": "CKHL_SM",
+  
+  "categorical": [
+    "Source",
+    "Zone"
+  ],
+  
+  "categorical_values": {
+    "Source": ["A", "B", "C", "D", "E", "F", "G"],
+    "Zone": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  
+  "continuous": [
+    "DEPTH",
+    "CPOR_SM",
+    "CALI",
+    "CT",
+    "DRHO",
+    "GR",
+    "MSFL",
+    "NPHI",
+    "PHIT",
+    "RHOB",
+    "RT",
+    "SWT",
+    "DT",
+    "PEF"
+  ],
+  
+  "binary_common": [
+    "CT_missing",
+    "RT_missing",
+    "SWT_missing",
+    "MSFL_missing_source",
+    "DT_missing_source",
+    "PEF_missing_source"
+  ],
+  
+  "binary_with_outlier_only": [
+    "CALI_outlier",
+    "CT_outlier",
+    "DRHO_outlier",
+    "GR_outlier",
+    "MSFL_outlier",
+    "NPHI_outlier",
+    "PHIT_outlier",
+    "RHOB_outlier",
+    "RT_outlier",
+    "SWT_outlier",
+    "DT_outlier",
+    "PEF_outlier",
+    "CPOR_SM_outlier"
+  ],
+  
+  "_notes": {
+    "continuous": "14 features (excludes target CKHL_SM). DT and PEF have missing values (36.47% and 15.59%).",
+    "binary_common": "Present in all 4 variants. CT/RT/SWT_missing: per-sample sentinel cleanup flags. MSFL/DT/PEF_missing_source: source-level curve absence.",
+    "binary_with_outlier_only": "Only present in with_outlier variants. All _missing columns were dropped (all zeros).",
+    "dropped_columns": "All _missing columns and most _missing_source columns were dropped as they had all zeros.",
+    "categorical_values": "Explicit category lists for OneHotEncoder. Source: 7 wells (A-G). Zone: 11 zones (0-10) from zonation_ranges_depths.csv."
+  }
+}

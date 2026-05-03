@@ -1,0 +1,21 @@
+{
+  "n_folds": 7,
+  "group_column": "Source",
+  "hp_budget": 1000,
+  "random_search_fraction": 0.5,
+  "bayesian_fraction": 0.5,
+  "random_state": 20260211,
+  "target_column": "CKHL_SM",
+  "dataset_variants": {
+    "with_outlier_default_adaptive": "dataset/prepared_variants/all_sources_with_outlier_default_adaptive.csv",
+    "with_outlier_default_linear": "dataset/prepared_variants/all_sources_with_outlier_default_linear.csv",
+    "without_outlier_adaptive": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
+    "without_outlier_linear": "dataset/prepared_variants/all_sources_without_outlier_linear.csv"
+  },
+  "_notes": {
+    "n_folds": "7-fold Leave-One-Well-Out CV (wells A-G)",
+    "hp_budget": "1000 trials per model (500 random + 500 Bayesian)",
+    "optimization_metric": "RMSE_log (negative, sklearn convention: higher is better). All 8 metrics are computed for each trial.",
+    "random_state": "Fixed seed for reproducibility"
+  }
+}
