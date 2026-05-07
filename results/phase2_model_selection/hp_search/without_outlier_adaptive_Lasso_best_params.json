@@ -1,0 +1,32 @@
+{
+  "model": "Lasso",
+  "variant": "without_outlier_adaptive",
+  "best_params": {
+    "alpha": 0.04105786016398253
+  },
+  "best_score": -0.6933519040479451,
+  "best_metrics": {
+    "RMSE": 188.00895511105097,
+    "MAE": 63.28830513274949,
+    "MedAE": 5.066590049066646,
+    "R2": 0.12647327370206682,
+    "RMSLE": 0.6933519040479451,
+    "RMSE_log": 0.6933519040479451,
+    "MAE_log": 0.568122489056388,
+    "R2_log": 0.6527984889717185
+  },
+  "best_search_type": "random",
+  "elapsed_seconds": 23.23222255706787,
+  "timing": {
+    "random_search_seconds": 16.706986665725708,
+    "bayesian_search_seconds": 6.524827718734741,
+    "total_search_seconds": 23.23181653022766,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 0.033413973331451415,
+    "avg_trial_seconds_bayesian": 0.013049655437469483,
+    "avg_trial_seconds_overall": 0.023231816530227663
+  },
+  "timestamp": "2026-03-14T07:50:27.194761"
+}

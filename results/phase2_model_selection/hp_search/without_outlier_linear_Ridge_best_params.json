@@ -1,0 +1,32 @@
+{
+  "model": "Ridge",
+  "variant": "without_outlier_linear",
+  "best_params": {
+    "alpha": 99.99992186829026
+  },
+  "best_score": -0.8570884477063777,
+  "best_metrics": {
+    "RMSE": 283.8419397170968,
+    "MAE": 111.6112327407956,
+    "MedAE": 16.726187066069905,
+    "R2": -2.994849034348896,
+    "RMSLE": 0.8570884477063777,
+    "RMSE_log": 0.8570884477063777,
+    "MAE_log": 0.7185405822660667,
+    "R2_log": 0.42419946975378525
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 13.698049068450928,
+  "timing": {
+    "random_search_seconds": 6.214187860488892,
+    "bayesian_search_seconds": 7.483299493789673,
+    "total_search_seconds": 13.697489738464355,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 0.012428375720977783,
+    "avg_trial_seconds_bayesian": 0.014966598987579346,
+    "avg_trial_seconds_overall": 0.013697489738464356
+  },
+  "timestamp": "2026-03-14T07:50:17.664514"
+}

@@ -1,0 +1,37 @@
+{
+  "model": "CatBoost",
+  "variant": "with_outlier_default_linear",
+  "best_params": {
+    "bagging_temperature": 0.4253876195297016,
+    "border_count": 254,
+    "depth": 7,
+    "iterations": 200,
+    "l2_leaf_reg": 0.0019049749560336835,
+    "learning_rate": 0.04570093572618132
+  },
+  "best_score": -0.6770875338224481,
+  "best_metrics": {
+    "RMSE": 194.45647536680409,
+    "MAE": 63.48118403665514,
+    "MedAE": 5.4733214366512835,
+    "R2": 0.06207981362097877,
+    "RMSLE": 0.6770875338224481,
+    "RMSE_log": 0.6770875338224481,
+    "MAE_log": 0.5501356011133639,
+    "R2_log": 0.6669084994712723
+  },
+  "best_search_type": "random",
+  "elapsed_seconds": 5489.781417131424,
+  "timing": {
+    "random_search_seconds": 3400.838104724884,
+    "bayesian_search_seconds": 2088.9428882598877,
+    "total_search_seconds": 5489.7809953689575,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 6.801676209449768,
+    "avg_trial_seconds_bayesian": 4.177885776519775,
+    "avg_trial_seconds_overall": 5.489780995368958
+  },
+  "timestamp": "2026-03-14T09:21:36.445590"
+}

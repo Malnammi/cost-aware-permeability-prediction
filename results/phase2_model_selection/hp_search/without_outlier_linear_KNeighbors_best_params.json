@@ -1,0 +1,34 @@
+{
+  "model": "KNeighbors",
+  "variant": "without_outlier_linear",
+  "best_params": {
+    "n_neighbors": 30,
+    "p": 1,
+    "weights": "uniform"
+  },
+  "best_score": -0.8051981370438842,
+  "best_metrics": {
+    "RMSE": 195.4241794640243,
+    "MAE": 67.2949110699757,
+    "MedAE": 6.775873796981412,
+    "R2": 0.06762492149788994,
+    "RMSLE": 0.8051981370438842,
+    "RMSE_log": 0.8051981370438842,
+    "MAE_log": 0.6493326433141389,
+    "R2_log": 0.519430501701311
+  },
+  "best_search_type": "random",
+  "elapsed_seconds": 63.76706027984619,
+  "timing": {
+    "random_search_seconds": 23.925450086593628,
+    "bayesian_search_seconds": 39.8411226272583,
+    "total_search_seconds": 63.766576051712036,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 0.04785090017318726,
+    "avg_trial_seconds_bayesian": 0.0796822452545166,
+    "avg_trial_seconds_overall": 0.06376657605171204
+  },
+  "timestamp": "2026-03-14T07:51:10.419142"
+}

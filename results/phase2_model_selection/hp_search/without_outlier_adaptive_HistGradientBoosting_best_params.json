@@ -1,0 +1,37 @@
+{
+  "model": "HistGradientBoosting",
+  "variant": "without_outlier_adaptive",
+  "best_params": {
+    "max_iter": 500,
+    "learning_rate": 0.029528118427667643,
+    "max_depth": 5,
+    "min_samples_leaf": 49,
+    "max_leaf_nodes": 127,
+    "l2_regularization": 3.932855482909881
+  },
+  "best_score": -0.6790917986559997,
+  "best_metrics": {
+    "RMSE": 183.88803923833194,
+    "MAE": 63.06482520695356,
+    "MedAE": 5.413026952299374,
+    "R2": 0.1398896415194778,
+    "RMSLE": 0.6790917986559997,
+    "RMSE_log": 0.6790917986559997,
+    "MAE_log": 0.5493868670954265,
+    "R2_log": 0.665081119531042
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 4407.699674606323,
+  "timing": {
+    "random_search_seconds": 3064.2366602420807,
+    "bayesian_search_seconds": 1343.462575674057,
+    "total_search_seconds": 4407.699238061905,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 6.1284733204841615,
+    "avg_trial_seconds_bayesian": 2.686925151348114,
+    "avg_trial_seconds_overall": 4.407699238061905
+  },
+  "timestamp": "2026-03-14T09:03:34.360780"
+}

@@ -1,0 +1,36 @@
+{
+  "model": "ExtraTrees",
+  "variant": "with_outlier_default_linear",
+  "best_params": {
+    "n_estimators": 800,
+    "max_depth": 30,
+    "max_features": 0.5,
+    "min_samples_split": 10,
+    "min_samples_leaf": 2
+  },
+  "best_score": -0.6747992554314258,
+  "best_metrics": {
+    "RMSE": 192.21465964572764,
+    "MAE": 63.1641412584701,
+    "MedAE": 5.310685117307856,
+    "R2": 0.0829638672930741,
+    "RMSLE": 0.6747992554314258,
+    "RMSE_log": 0.6747992554314258,
+    "MAE_log": 0.5437270480914718,
+    "R2_log": 0.6678304959929672
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 5024.4827427864075,
+  "timing": {
+    "random_search_seconds": 1398.1455149650574,
+    "bayesian_search_seconds": 3626.336590528488,
+    "total_search_seconds": 5024.48210811615,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 2.796291029930115,
+    "avg_trial_seconds_bayesian": 7.252673181056976,
+    "avg_trial_seconds_overall": 5.02448210811615
+  },
+  "timestamp": "2026-03-14T09:13:48.444092"
+}

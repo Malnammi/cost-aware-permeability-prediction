@@ -1,0 +1,36 @@
+{
+  "model": "Bagging",
+  "variant": "with_outlier_default_linear",
+  "best_params": {
+    "n_estimators": 200,
+    "max_samples": 0.501655031518932,
+    "max_features": 0.9840126107115283,
+    "bootstrap": true,
+    "bootstrap_features": false
+  },
+  "best_score": -0.6835997418166324,
+  "best_metrics": {
+    "RMSE": 189.211852790575,
+    "MAE": 62.90393349043027,
+    "MedAE": 5.444831815257716,
+    "R2": 0.11204206095961236,
+    "RMSLE": 0.6835997418166324,
+    "RMSE_log": 0.6835997418166324,
+    "MAE_log": 0.5575713050993114,
+    "R2_log": 0.6614525005255247
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 7445.798151254654,
+  "timing": {
+    "random_search_seconds": 4268.4517385959625,
+    "bayesian_search_seconds": 3177.346182823181,
+    "total_search_seconds": 7445.797924041748,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 8.536903477191926,
+    "avg_trial_seconds_bayesian": 6.354692365646362,
+    "avg_trial_seconds_overall": 7.445797924041748
+  },
+  "timestamp": "2026-03-14T09:54:09.754432"
+}

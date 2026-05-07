@@ -1,0 +1,33 @@
+{
+  "model": "ElasticNet",
+  "variant": "with_outlier_default_adaptive",
+  "best_params": {
+    "alpha": 0.05069355640801928,
+    "l1_ratio": 0.7873998053483275
+  },
+  "best_score": -0.6977647754211768,
+  "best_metrics": {
+    "RMSE": 190.59193906927172,
+    "MAE": 63.83592431841516,
+    "MedAE": 5.016770116082124,
+    "R2": 0.10498759987659523,
+    "RMSLE": 0.6977647754211768,
+    "RMSE_log": 0.6977647754211768,
+    "MAE_log": 0.5680267777608192,
+    "R2_log": 0.6488348517242802
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 32.46564245223999,
+  "timing": {
+    "random_search_seconds": 24.31232738494873,
+    "bayesian_search_seconds": 8.152921676635742,
+    "total_search_seconds": 32.46525168418884,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 0.04862465476989746,
+    "avg_trial_seconds_bayesian": 0.016305843353271485,
+    "avg_trial_seconds_overall": 0.032465251684188845
+  },
+  "timestamp": "2026-03-14T07:50:36.424120"
+}

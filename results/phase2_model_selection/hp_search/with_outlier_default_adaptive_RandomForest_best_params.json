@@ -1,0 +1,36 @@
+{
+  "model": "RandomForest",
+  "variant": "with_outlier_default_adaptive",
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": null,
+    "max_features": 0.5,
+    "min_samples_split": 6,
+    "min_samples_leaf": 5
+  },
+  "best_score": -0.6789526395038971,
+  "best_metrics": {
+    "RMSE": 188.96242130952783,
+    "MAE": 62.97646908824748,
+    "MedAE": 5.503553975818832,
+    "R2": 0.10798043939725832,
+    "RMSLE": 0.6789526395038971,
+    "RMSE_log": 0.6789526395038971,
+    "MAE_log": 0.5539990777289352,
+    "R2_log": 0.6641260297163696
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 6095.247670650482,
+  "timing": {
+    "random_search_seconds": 2817.3788135051727,
+    "bayesian_search_seconds": 3277.868636608124,
+    "total_search_seconds": 6095.247452735901,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 5.634757627010345,
+    "avg_trial_seconds_bayesian": 6.5557372732162476,
+    "avg_trial_seconds_overall": 6.095247452735901
+  },
+  "timestamp": "2026-03-14T09:31:39.204924"
+}

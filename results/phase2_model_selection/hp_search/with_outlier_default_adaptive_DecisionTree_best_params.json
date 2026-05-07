@@ -1,0 +1,35 @@
+{
+  "model": "DecisionTree",
+  "variant": "with_outlier_default_adaptive",
+  "best_params": {
+    "max_depth": 5,
+    "min_samples_split": 10,
+    "min_samples_leaf": 5,
+    "max_features": null
+  },
+  "best_score": -0.7309011888686603,
+  "best_metrics": {
+    "RMSE": 177.14919785087062,
+    "MAE": 63.4233802262137,
+    "MedAE": 5.660347746032031,
+    "R2": 0.16673650912681598,
+    "RMSLE": 0.7309011888686603,
+    "RMSE_log": 0.7309011888686603,
+    "MAE_log": 0.5864673790093355,
+    "R2_log": 0.6146917759903076
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 66.40389394760132,
+  "timing": {
+    "random_search_seconds": 25.604400396347046,
+    "bayesian_search_seconds": 40.79890561103821,
+    "total_search_seconds": 66.40330767631531,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 0.05120880079269409,
+    "avg_trial_seconds_bayesian": 0.08159781122207642,
+    "avg_trial_seconds_overall": 0.0664033076763153
+  },
+  "timestamp": "2026-03-14T07:51:10.363162"
+}

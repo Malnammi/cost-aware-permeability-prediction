@@ -1,0 +1,41 @@
+{
+  "model": "MLP",
+  "variant": "without_outlier_linear",
+  "best_params": {
+    "hidden_layer_sizes": [
+      128,
+      64,
+      32
+    ],
+    "learning_rate_init": 0.009999235990518362,
+    "alpha": 0.006349127842809949,
+    "activation": "tanh",
+    "solver": "adam",
+    "batch_size": 32
+  },
+  "best_score": -0.803059192512378,
+  "best_metrics": {
+    "RMSE": 190.55276065045743,
+    "MAE": 65.271291548306,
+    "MedAE": 5.272022518458251,
+    "R2": 0.09520873386013849,
+    "RMSLE": 0.803059192512378,
+    "RMSE_log": 0.803059192512378,
+    "MAE_log": 0.635625331314509,
+    "R2_log": 0.5284214175467035
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 10067.713639497757,
+  "timing": {
+    "random_search_seconds": 7326.249293804169,
+    "bayesian_search_seconds": 2741.463917016983,
+    "total_search_seconds": 10067.713213205338,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 14.652498587608337,
+    "avg_trial_seconds_bayesian": 5.482927834033966,
+    "avg_trial_seconds_overall": 10.067713213205337
+  },
+  "timestamp": "2026-03-14T10:37:54.365160"
+}

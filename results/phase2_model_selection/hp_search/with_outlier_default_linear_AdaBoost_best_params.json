@@ -1,0 +1,34 @@
+{
+  "model": "AdaBoost",
+  "variant": "with_outlier_default_linear",
+  "best_params": {
+    "n_estimators": 50,
+    "learning_rate": 0.08568414244149741,
+    "loss": "exponential"
+  },
+  "best_score": -0.687948542587827,
+  "best_metrics": {
+    "RMSE": 194.3802143720046,
+    "MAE": 64.17063039785776,
+    "MedAE": 6.021174436562987,
+    "R2": 0.07789838412376718,
+    "RMSLE": 0.687948542587827,
+    "RMSE_log": 0.687948542587827,
+    "MAE_log": 0.5677304870395901,
+    "R2_log": 0.6556985735427939
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 4989.036769151688,
+  "timing": {
+    "random_search_seconds": 3439.8494074344635,
+    "bayesian_search_seconds": 1549.1867671012878,
+    "total_search_seconds": 4989.0361764431,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 6.879698814868927,
+    "avg_trial_seconds_bayesian": 3.0983735342025756,
+    "avg_trial_seconds_overall": 4.9890361764431
+  },
+  "timestamp": "2026-03-14T09:13:15.699153"
+}

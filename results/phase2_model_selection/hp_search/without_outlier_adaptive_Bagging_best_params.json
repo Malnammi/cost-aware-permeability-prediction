@@ -1,0 +1,36 @@
+{
+  "model": "Bagging",
+  "variant": "without_outlier_adaptive",
+  "best_params": {
+    "n_estimators": 200,
+    "max_samples": 0.5106020762505448,
+    "max_features": 0.965726671994651,
+    "bootstrap": true,
+    "bootstrap_features": false
+  },
+  "best_score": -0.6829303044124316,
+  "best_metrics": {
+    "RMSE": 188.52848961173126,
+    "MAE": 63.033730616641904,
+    "MedAE": 5.451417606279851,
+    "R2": 0.11816914751862065,
+    "RMSLE": 0.6829303044124316,
+    "RMSE_log": 0.6829303044124316,
+    "MAE_log": 0.5584385554967054,
+    "R2_log": 0.6607211980474332
+  },
+  "best_search_type": "bayesian",
+  "elapsed_seconds": 7065.7090582847595,
+  "timing": {
+    "random_search_seconds": 4118.97746348381,
+    "bayesian_search_seconds": 2946.7313272953033,
+    "total_search_seconds": 7065.708794116974,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 8.237954926967621,
+    "avg_trial_seconds_bayesian": 5.893462654590607,
+    "avg_trial_seconds_overall": 7.065708794116974
+  },
+  "timestamp": "2026-03-14T09:47:49.674441"
+}

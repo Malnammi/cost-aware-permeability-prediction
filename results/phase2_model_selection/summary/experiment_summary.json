@@ -1,0 +1,63 @@
+{
+  "models": [
+    "MLP"
+  ],
+  "variants": [
+    "with_outlier_default_linear"
+  ],
+  "budget": 1000,
+  "n_splits": 7,
+  "random_state": 20260211,
+  "runtime": {
+    "total_experiment_seconds": 12354.789657354355,
+    "total_experiment_minutes": 205.9131609559059,
+    "per_variant_seconds": {
+      "with_outlier_default_linear": 12354.780576229095
+    },
+    "per_model_seconds": {
+      "MLP": 12354.541128396988
+    }
+  },
+  "results": [
+    {
+      "model": "MLP",
+      "variant": "with_outlier_default_linear",
+      "best_params": {
+        "hidden_layer_sizes": [
+          128,
+          64,
+          32
+        ],
+        "learning_rate_init": 0.009163896968121171,
+        "alpha": 0.009254488350608535,
+        "activation": "tanh",
+        "solver": "adam",
+        "batch_size": 32
+      },
+      "best_score": -0.7841408524450699,
+      "best_metrics": {
+        "RMSE": 194.92581172121254,
+        "MAE": 66.09426213753275,
+        "MedAE": 5.54170483723594,
+        "R2": 0.06182509565630261,
+        "RMSLE": 0.7841408524450699,
+        "RMSE_log": 0.7841408524450699,
+        "MAE_log": 0.616018620410367,
+        "R2_log": 0.5481970963705826
+      },
+      "elapsed_seconds": 12354.541128396988,
+      "timing": {
+        "random_search_seconds": 7934.828487157822,
+        "bayesian_search_seconds": 4419.712204456329,
+        "total_search_seconds": 12354.540693759918,
+        "n_random_trials": 500,
+        "n_bayesian_trials": 500,
+        "n_total_trials": 1000,
+        "avg_trial_seconds_random": 15.869656974315644,
+        "avg_trial_seconds_bayesian": 8.83942440891266,
+        "avg_trial_seconds_overall": 12.354540693759919
+      }
+    }
+  ],
+  "timestamp": "2026-03-14T11:16:01.190807"
+}

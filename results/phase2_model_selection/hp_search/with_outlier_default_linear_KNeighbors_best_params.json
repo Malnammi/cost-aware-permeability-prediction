@@ -1,0 +1,34 @@
+{
+  "model": "KNeighbors",
+  "variant": "with_outlier_default_linear",
+  "best_params": {
+    "n_neighbors": 26,
+    "p": 1,
+    "weights": "distance"
+  },
+  "best_score": -0.793131935444501,
+  "best_metrics": {
+    "RMSE": 197.1467808898457,
+    "MAE": 67.69570767418095,
+    "MedAE": 6.741235298641812,
+    "R2": 0.056247687401239484,
+    "RMSLE": 0.793131935444501,
+    "RMSE_log": 0.793131935444501,
+    "MAE_log": 0.6378363346514512,
+    "R2_log": 0.5324734559614862
+  },
+  "best_search_type": "random",
+  "elapsed_seconds": 80.17048168182373,
+  "timing": {
+    "random_search_seconds": 30.43138337135315,
+    "bayesian_search_seconds": 49.73860239982605,
+    "total_search_seconds": 80.16998791694641,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 0.0608627667427063,
+    "avg_trial_seconds_bayesian": 0.0994772047996521,
+    "avg_trial_seconds_overall": 0.0801699879169464
+  },
+  "timestamp": "2026-03-14T07:51:26.821393"
+}
