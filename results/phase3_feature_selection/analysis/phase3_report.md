@@ -1,6 +1,6 @@
 # Phase 3 Feature Selection — Analysis Report
 
-Generated: 2026-05-02 01:53:02
+Generated: 2026-06-06 16:06:54
 
 ## Configuration
 
@@ -88,21 +88,21 @@ Wells analysed: A, B, C, D, E, F, G
 
 | subset_id | features | n_features | cost | RMSE_log_mean | RMSE_log_std | RMSE_log_ci |
 | --- | --- | --- | --- | --- | --- | --- |
-| 4550 | CALI,DRHO,CT,PEF,MSFL,CPOR_SM | 6 | 21 | 0.6552 | 0.0534 | 0.7046 |
-| 4326 | CALI,DRHO,RT,CT,PEF,CPOR_SM | 6 | 18 | 0.6592 | 0.0593 | 0.7140 |
-| 4290 | CALI,CT,PEF,CPOR_SM | 4 | 16 | 0.6677 | 0.0556 | 0.7191 |
-| 4236 | DRHO,RHOB,PEF,CPOR_SM | 4 | 13 | 0.6750 | 0.0452 | 0.7168 |
-| 4300 | DRHO,RHOB,CT,PEF,CPOR_SM | 5 | 15 | 0.6772 | 0.0508 | 0.7242 |
-| 4238 | CALI,DRHO,RHOB,PEF,CPOR_SM | 5 | 14 | 0.6772 | 0.0512 | 0.7246 |
-| 4098 | CALI,CPOR_SM | 2 | 11 | 0.6978 | 0.0326 | 0.7279 |
-| 4096 | CPOR_SM | 1 | 10 | 0.7204 | 0.0423 | 0.7594 |
-| 640 | PEF,PHIT | 2 | 7 | 0.8065 | 0.0838 | 0.8840 |
-| 704 | CT,PEF,PHIT | 3 | 9 | 0.8128 | 0.0931 | 0.8989 |
-| 152 | RHOB,NPHI,PEF | 3 | 5 | 0.8203 | 0.0925 | 0.9059 |
-| 140 | DRHO,RHOB,PEF | 3 | 3 | 0.8404 | 0.0720 | 0.9070 |
-| 12 | DRHO,RHOB | 2 | 2 | 0.8647 | 0.0715 | 0.9308 |
-| 1 | GR | 1 | 1 | 1.0385 | 0.0380 | 1.0736 |
-| 0 | (DEPTH-only) | 0 | 0 | 1.0495 | 0.0422 | 1.0886 |
+| 4550 | CALI,DRHO,CT,PEF,MSFL,CPOR_SM | 6 | 21 | 0.6523 | 0.0563 | 0.7043 |
+| 4326 | CALI,DRHO,RT,CT,PEF,CPOR_SM | 6 | 18 | 0.6587 | 0.0594 | 0.7136 |
+| 4290 | CALI,CT,PEF,CPOR_SM | 4 | 16 | 0.6602 | 0.0637 | 0.7191 |
+| 4238 | CALI,DRHO,RHOB,PEF,CPOR_SM | 5 | 14 | 0.6731 | 0.0476 | 0.7172 |
+| 4300 | DRHO,RHOB,CT,PEF,CPOR_SM | 5 | 15 | 0.6732 | 0.0481 | 0.7178 |
+| 4236 | DRHO,RHOB,PEF,CPOR_SM | 4 | 13 | 0.6766 | 0.0443 | 0.7176 |
+| 4098 | CALI,CPOR_SM | 2 | 11 | 0.6928 | 0.0335 | 0.7238 |
+| 4096 | CPOR_SM | 1 | 10 | 0.7171 | 0.0403 | 0.7544 |
+| 640 | PEF,PHIT | 2 | 7 | 0.8042 | 0.0880 | 0.8856 |
+| 704 | CT,PEF,PHIT | 3 | 9 | 0.8060 | 0.0926 | 0.8917 |
+| 152 | RHOB,NPHI,PEF | 3 | 5 | 0.8156 | 0.0919 | 0.9006 |
+| 140 | DRHO,RHOB,PEF | 3 | 3 | 0.8345 | 0.0709 | 0.9001 |
+| 12 | DRHO,RHOB | 2 | 2 | 0.8569 | 0.0664 | 0.9183 |
+| 1 | GR | 1 | 1 | 1.0349 | 0.0478 | 1.0791 |
+| 0 | (DEPTH-only) | 0 | 0 | 1.0494 | 0.0408 | 1.0872 |
 
 ---
 
@@ -121,6 +121,7 @@ Re-evaluated Pareto subsets with XGBoost on `dataset/prepared_variants/all_sourc
 | 4096 | CPOR_SM | 1 | 10 | 0.7296 | 0.0514 | 0.7771 |
 | 4098 | CALI,CPOR_SM | 2 | 11 | 0.7330 | 0.0538 | 0.7828 |
 | 4236 | DRHO,RHOB,PEF,CPOR_SM | 4 | 13 | 0.6814 | 0.0552 | 0.7325 |
+| 4238 | CALI,DRHO,RHOB,PEF,CPOR_SM | 5 | 14 | 0.7176 | 0.0755 | 0.7874 |
 | 4290 | CALI,CT,PEF,CPOR_SM | 4 | 16 | 0.6961 | 0.0347 | 0.7281 |
 | 4326 | CALI,DRHO,RT,CT,PEF,CPOR_SM | 6 | 18 | 0.7025 | 0.0573 | 0.7555 |
 | 4550 | CALI,DRHO,CT,PEF,MSFL,CPOR_SM | 6 | 21 | 0.6939 | 0.0438 | 0.7344 |
@@ -131,21 +132,21 @@ Re-evaluated Pareto subsets with XGBoost on `dataset/prepared_variants/all_sourc
 
 ### Tables
 
-- **T1**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\tables\pareto_optimal_subsets.csv`
-- **T2**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\tables\shap_grouped_feature_importance.csv`
-- **T3**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\tables\shap_vs_cost.csv`
+- **T1**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/tables/pareto_optimal_subsets.csv`
+- **T2**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/tables/shap_grouped_feature_importance.csv`
+- **T3**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/tables/shap_vs_cost.csv`
 
 ### Figures
 
-- **F1**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\shap_global_bar.pdf`
-- **F2**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\shap_beeswarm.pdf`
-- **F3**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\shap_per_well_heatmap.pdf`
-- **F4_MAE**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\pareto_frontier_MAE.pdf`
-- **F4_MAE_log**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\pareto_frontier_MAE_log.pdf`
-- **F4_R2**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\pareto_frontier_R2.pdf`
-- **F4_R2_log**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\pareto_frontier_R2_log.pdf`
-- **F4_RMSE**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\pareto_frontier_RMSE.pdf`
-- **F4_RMSE_log**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\pareto_frontier_RMSE_log.pdf`
-- **F5**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\pareto_frontier_retune.pdf`
-- **F6**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\pareto_validation.pdf`
-- **F7**: `D:\moeman\research\bayan\predict-permeability\github-codebase\results\phase3_feature_selection\analysis\figures\pdf\feature_frequency_pareto.pdf`
+- **F1**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/shap_global_bar.pdf`
+- **F2**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/shap_beeswarm.pdf`
+- **F3**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/shap_per_well_heatmap.pdf`
+- **F4_MAE**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/pareto_frontier_MAE.pdf`
+- **F4_MAE_log**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/pareto_frontier_MAE_log.pdf`
+- **F4_R2**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/pareto_frontier_R2.pdf`
+- **F4_R2_log**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/pareto_frontier_R2_log.pdf`
+- **F4_RMSE**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/pareto_frontier_RMSE.pdf`
+- **F4_RMSE_log**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/pareto_frontier_RMSE_log.pdf`
+- **F5**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/pareto_frontier_retune.pdf`
+- **F6**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/pareto_validation.pdf`
+- **F7**: `/home/moayad/predict-permeability/results/phase3_feature_selection/analysis/figures/pdf/feature_frequency_pareto.pdf`
