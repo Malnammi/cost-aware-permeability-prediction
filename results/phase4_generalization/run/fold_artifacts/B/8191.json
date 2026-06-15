@@ -1,0 +1,64 @@
+{
+  "outer_fold": "B",
+  "subset_id": 8191,
+  "subset_label": "full_feature_baseline",
+  "features": [
+    "GR",
+    "CALI",
+    "DRHO",
+    "RHOB",
+    "NPHI",
+    "RT",
+    "CT",
+    "PEF",
+    "MSFL",
+    "PHIT",
+    "DT",
+    "SWT",
+    "CPOR_SM"
+  ],
+  "cost": 31,
+  "model": "ExtraTrees",
+  "variant": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
+  "hp_budget": 1000,
+  "search_timing": {
+    "random_search_seconds": 803.324934720993,
+    "bayesian_search_seconds": 641.2972707748413,
+    "total_search_seconds": 1444.6222085952759,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.6066498694419862,
+    "avg_trial_seconds_bayesian": 1.2825945415496827,
+    "avg_trial_seconds_overall": 1.4446222085952758
+  },
+  "inner_best_score": -0.7008229991177907,
+  "inner_best_metrics": {
+    "RMSE": 203.4553424560514,
+    "MAE": 67.65467957161432,
+    "MedAE": 6.569848011793165,
+    "R2": 0.0973041298959566,
+    "RMSLE": 0.7008229991177907,
+    "RMSE_log": 0.7008229991177907,
+    "MAE_log": 0.5687529687203193,
+    "R2_log": 0.6358992234437832
+  },
+  "outer_metrics": {
+    "RMSE": 110.23055749033618,
+    "MAE": 34.77268017903075,
+    "MedAE": 1.9720018462979658,
+    "R2": 0.09377489094899472,
+    "RMSLE": 0.6126564023068022,
+    "RMSE_log": 0.6126564023068022,
+    "MAE_log": 0.48960122387275967,
+    "R2_log": 0.7700199839488387
+  },
+  "best_params": {
+    "n_estimators": 300,
+    "max_depth": 30,
+    "max_features": 0.5,
+    "min_samples_split": 10,
+    "min_samples_leaf": 3
+  },
+  "timestamp": "2026-06-04T15:50:54.743683"
+}

@@ -10,43 +10,43 @@
   "variant": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
   "hp_budget": 1000,
   "search_timing": {
-    "random_search_seconds": 609.3171248435974,
-    "bayesian_search_seconds": 300.76035809516907,
-    "total_search_seconds": 910.0774857997894,
+    "random_search_seconds": 607.275630235672,
+    "bayesian_search_seconds": 334.463082075119,
+    "total_search_seconds": 941.7387170791626,
     "n_random_trials": 500,
     "n_bayesian_trials": 500,
     "n_total_trials": 1000,
-    "avg_trial_seconds_random": 1.218634249687195,
-    "avg_trial_seconds_bayesian": 0.6015207161903381,
-    "avg_trial_seconds_overall": 0.9100774857997894
+    "avg_trial_seconds_random": 1.214551260471344,
+    "avg_trial_seconds_bayesian": 0.6689261641502381,
+    "avg_trial_seconds_overall": 0.9417387170791626
   },
-  "inner_best_score": -0.7013034202088423,
+  "inner_best_score": -0.7037488986333003,
   "inner_best_metrics": {
-    "RMSE": 201.19108574214394,
-    "MAE": 65.71309813909717,
-    "MedAE": 5.23912263193199,
-    "R2": 0.06722746651865695,
-    "RMSLE": 0.7013034202088423,
-    "RMSE_log": 0.7013034202088423,
-    "MAE_log": 0.5652243302148997,
-    "R2_log": 0.6394007985139196
+    "RMSE": 201.28355847084106,
+    "MAE": 65.81670287701999,
+    "MedAE": 5.316909751044237,
+    "R2": 0.06719896933454594,
+    "RMSLE": 0.7037488986333003,
+    "RMSE_log": 0.7037488986333003,
+    "MAE_log": 0.5675134945865764,
+    "R2_log": 0.6362717461721713
   },
   "outer_metrics": {
-    "RMSE": 125.84945769101469,
+    "RMSE": 125.84945769101472,
     "MAE": 49.064677561106016,
-    "MedAE": 3.7502862427219834,
-    "R2": 0.4057266901976948,
+    "MedAE": 3.7502862427219816,
+    "R2": 0.4057266901976946,
     "RMSLE": 0.6703505390575948,
     "RMSE_log": 0.6703505390575948,
-    "MAE_log": 0.5612813719849372,
+    "MAE_log": 0.5612813719849373,
     "R2_log": 0.7090363458360988
   },
   "best_params": {
-    "n_estimators": 100,
     "max_depth": 10,
     "max_features": 0.5,
+    "min_samples_leaf": 3,
     "min_samples_split": 6,
-    "min_samples_leaf": 3
+    "n_estimators": 100
   },
-  "timestamp": "2026-04-16T02:20:12.336819"
+  "timestamp": "2026-06-04T15:15:13.084187"
 }

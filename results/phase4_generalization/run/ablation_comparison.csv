@@ -1,0 +1,97 @@
+subset_id,subset_label,config_slug,config_label,dropped,metric,direction,reference_source,config_mean,full_mean,delta_vs_full
+640,budget_wireline_only,no_source,-Source,Source,RMSE,minimize,phase4_nested_full,198.79576840183927,197.63893928050342,1.1568291213358464
+640,budget_wireline_only,no_source,-Source,Source,MAE,minimize,phase4_nested_full,67.38849989255668,67.21223488094856,0.17626501160812325
+640,budget_wireline_only,no_source,-Source,Source,MedAE,minimize,phase4_nested_full,6.468778710716863,7.754176761282346,-1.2853980505654832
+640,budget_wireline_only,no_source,-Source,Source,R2,maximize,phase4_nested_full,0.0419269662646667,0.05193232463434615,-0.010005358369679446
+640,budget_wireline_only,no_source,-Source,Source,RMSLE,minimize,phase4_nested_full,0.8182547939743217,0.8103382783746331,0.007916515599688534
+640,budget_wireline_only,no_source,-Source,Source,RMSE_log,minimize,phase4_nested_full,0.8182547939743217,0.8103382783746331,0.007916515599688534
+640,budget_wireline_only,no_source,-Source,Source,MAE_log,minimize,phase4_nested_full,0.6647588357687259,0.6570959168217856,0.007662918946940267
+640,budget_wireline_only,no_source,-Source,Source,R2_log,maximize,phase4_nested_full,0.5037446443319952,0.5122970834238504,-0.008552439091855213
+640,budget_wireline_only,no_zone,-Zone,Zone,RMSE,minimize,phase4_nested_full,202.19847463324743,197.63893928050342,4.559535352744007
+640,budget_wireline_only,no_zone,-Zone,Zone,MAE,minimize,phase4_nested_full,67.9132698346196,67.21223488094856,0.7010349536710407
+640,budget_wireline_only,no_zone,-Zone,Zone,MedAE,minimize,phase4_nested_full,7.042636024850897,7.754176761282346,-0.7115407364314486
+640,budget_wireline_only,no_zone,-Zone,Zone,R2,maximize,phase4_nested_full,0.0081220302622827,0.05193232463434615,-0.04381029437206345
+640,budget_wireline_only,no_zone,-Zone,Zone,RMSLE,minimize,phase4_nested_full,0.8052063045520258,0.8103382783746331,-0.0051319738226073275
+640,budget_wireline_only,no_zone,-Zone,Zone,RMSE_log,minimize,phase4_nested_full,0.8052063045520258,0.8103382783746331,-0.0051319738226073275
+640,budget_wireline_only,no_zone,-Zone,Zone,MAE_log,minimize,phase4_nested_full,0.6544683924576233,0.6570959168217856,-0.002627524364162248
+640,budget_wireline_only,no_zone,-Zone,Zone,R2_log,maximize,phase4_nested_full,0.5146527638178227,0.5122970834238504,0.0023556803939722704
+640,budget_wireline_only,no_depth,-DEPTH,DEPTH,RMSE,minimize,phase4_nested_full,197.7852536813725,197.63893928050342,0.14631440086907332
+640,budget_wireline_only,no_depth,-DEPTH,DEPTH,MAE,minimize,phase4_nested_full,67.1880931590667,67.21223488094856,-0.024141721881861145
+640,budget_wireline_only,no_depth,-DEPTH,DEPTH,MedAE,minimize,phase4_nested_full,7.554097634220263,7.754176761282346,-0.2000791270620832
+640,budget_wireline_only,no_depth,-DEPTH,DEPTH,R2,maximize,phase4_nested_full,0.0485894740702264,0.05193232463434615,-0.0033428505641197453
+640,budget_wireline_only,no_depth,-DEPTH,DEPTH,RMSLE,minimize,phase4_nested_full,0.8149148289811338,0.8103382783746331,0.00457655060650064
+640,budget_wireline_only,no_depth,-DEPTH,DEPTH,RMSE_log,minimize,phase4_nested_full,0.8149148289811338,0.8103382783746331,0.00457655060650064
+640,budget_wireline_only,no_depth,-DEPTH,DEPTH,MAE_log,minimize,phase4_nested_full,0.6637034963831068,0.6570959168217856,0.006607579561321186
+640,budget_wireline_only,no_depth,-DEPTH,DEPTH,R2_log,maximize,phase4_nested_full,0.5088015245935015,0.5122970834238504,-0.0034955588303489105
+640,budget_wireline_only,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",RMSE,minimize,phase4_nested_full,202.66493273459292,197.63893928050342,5.025993454089502
+640,budget_wireline_only,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",MAE,minimize,phase4_nested_full,68.41047889769915,67.21223488094856,1.1982440167505928
+640,budget_wireline_only,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",MedAE,minimize,phase4_nested_full,8.036698371508008,7.754176761282346,0.282521610225662
+640,budget_wireline_only,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",R2,maximize,phase4_nested_full,0.0018584399959117,0.05193232463434615,-0.05007388463843445
+640,budget_wireline_only,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",RMSLE,minimize,phase4_nested_full,0.8164811734451491,0.8103382783746331,0.006142895070516019
+640,budget_wireline_only,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",RMSE_log,minimize,phase4_nested_full,0.8164811734451491,0.8103382783746331,0.006142895070516019
+640,budget_wireline_only,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",MAE_log,minimize,phase4_nested_full,0.6660795926972397,0.6570959168217856,0.008983675875454122
+640,budget_wireline_only,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",R2_log,maximize,phase4_nested_full,0.5017219102207848,0.5122970834238504,-0.010575173203065558
+4096,cpor_sm_only_baseline,no_source,-Source,Source,RMSE,minimize,phase4_nested_full,192.50741814250424,194.20010522733384,-1.6926870848296005
+4096,cpor_sm_only_baseline,no_source,-Source,Source,MAE,minimize,phase4_nested_full,64.35025315883334,64.9194237733867,-0.5691706145533573
+4096,cpor_sm_only_baseline,no_source,-Source,Source,MedAE,minimize,phase4_nested_full,4.990496966020082,4.916470806260768,0.07402615975931415
+4096,cpor_sm_only_baseline,no_source,-Source,Source,R2,maximize,phase4_nested_full,0.0999190659077778,0.07768944105678646,0.022229624850991336
+4096,cpor_sm_only_baseline,no_source,-Source,Source,RMSLE,minimize,phase4_nested_full,0.7026531936186299,0.7230293607206365,-0.020376167102006626
+4096,cpor_sm_only_baseline,no_source,-Source,Source,RMSE_log,minimize,phase4_nested_full,0.7026531936186299,0.7230293607206365,-0.020376167102006626
+4096,cpor_sm_only_baseline,no_source,-Source,Source,MAE_log,minimize,phase4_nested_full,0.5636442570517533,0.5790974916735147,-0.015453234621761403
+4096,cpor_sm_only_baseline,no_source,-Source,Source,R2_log,maximize,phase4_nested_full,0.63977335745425,0.6155088154025693,0.024264542051680715
+4096,cpor_sm_only_baseline,no_zone,-Zone,Zone,RMSE,minimize,phase4_nested_full,200.26822702799376,194.20010522733384,6.068121800659924
+4096,cpor_sm_only_baseline,no_zone,-Zone,Zone,MAE,minimize,phase4_nested_full,66.61324439167933,64.9194237733867,1.6938206182926336
+4096,cpor_sm_only_baseline,no_zone,-Zone,Zone,MedAE,minimize,phase4_nested_full,5.440540932285159,4.916470806260768,0.524070126024391
+4096,cpor_sm_only_baseline,no_zone,-Zone,Zone,R2,maximize,phase4_nested_full,0.0193570844159563,0.07768944105678646,-0.05833235664083016
+4096,cpor_sm_only_baseline,no_zone,-Zone,Zone,RMSLE,minimize,phase4_nested_full,0.7388394738712086,0.7230293607206365,0.015810113150572125
+4096,cpor_sm_only_baseline,no_zone,-Zone,Zone,RMSE_log,minimize,phase4_nested_full,0.7388394738712086,0.7230293607206365,0.015810113150572125
+4096,cpor_sm_only_baseline,no_zone,-Zone,Zone,MAE_log,minimize,phase4_nested_full,0.6008541997359098,0.5790974916735147,0.021756708062395158
+4096,cpor_sm_only_baseline,no_zone,-Zone,Zone,R2_log,maximize,phase4_nested_full,0.6026840805816681,0.6155088154025693,-0.012824734820901185
+4096,cpor_sm_only_baseline,no_depth,-DEPTH,DEPTH,RMSE,minimize,phase4_nested_full,195.6479102132704,194.20010522733384,1.447804985936557
+4096,cpor_sm_only_baseline,no_depth,-DEPTH,DEPTH,MAE,minimize,phase4_nested_full,65.36935166572252,64.9194237733867,0.44992789233582187
+4096,cpor_sm_only_baseline,no_depth,-DEPTH,DEPTH,MedAE,minimize,phase4_nested_full,5.128726051878969,4.916470806260768,0.2122552456182012
+4096,cpor_sm_only_baseline,no_depth,-DEPTH,DEPTH,R2,maximize,phase4_nested_full,0.0654183998035253,0.07768944105678646,-0.012271041253261158
+4096,cpor_sm_only_baseline,no_depth,-DEPTH,DEPTH,RMSLE,minimize,phase4_nested_full,0.7332397897823032,0.7230293607206365,0.010210429061666693
+4096,cpor_sm_only_baseline,no_depth,-DEPTH,DEPTH,RMSE_log,minimize,phase4_nested_full,0.7332397897823032,0.7230293607206365,0.010210429061666693
+4096,cpor_sm_only_baseline,no_depth,-DEPTH,DEPTH,MAE_log,minimize,phase4_nested_full,0.5915909123901828,0.5790974916735147,0.012493420716668147
+4096,cpor_sm_only_baseline,no_depth,-DEPTH,DEPTH,R2_log,maximize,phase4_nested_full,0.602168962046246,0.6155088154025693,-0.013339853356323261
+4096,cpor_sm_only_baseline,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",RMSE,minimize,phase4_nested_full,193.78568899570695,194.20010522733384,-0.41441623162688757
+4096,cpor_sm_only_baseline,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",MAE,minimize,phase4_nested_full,64.71957882752763,64.9194237733867,-0.19984494585906987
+4096,cpor_sm_only_baseline,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",MedAE,minimize,phase4_nested_full,4.750978940634117,4.916470806260768,-0.16549186562665064
+4096,cpor_sm_only_baseline,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",R2,maximize,phase4_nested_full,0.0861394833954644,0.07768944105678646,0.008450042338677938
+4096,cpor_sm_only_baseline,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",RMSLE,minimize,phase4_nested_full,0.7229994135832862,0.7230293607206365,-2.9947137350272435e-05
+4096,cpor_sm_only_baseline,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",RMSE_log,minimize,phase4_nested_full,0.7229994135832862,0.7230293607206365,-2.9947137350272435e-05
+4096,cpor_sm_only_baseline,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",MAE_log,minimize,phase4_nested_full,0.5823709730858574,0.5790974916735147,0.003273481412342738
+4096,cpor_sm_only_baseline,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",R2_log,maximize,phase4_nested_full,0.6160448715024576,0.6155088154025693,0.0005360560998882713
+4550,best_performer,no_source,-Source,Source,RMSE,minimize,phase4_nested_full,190.1002253782064,190.6072605596142,-0.5070351814077867
+4550,best_performer,no_source,-Source,Source,MAE,minimize,phase4_nested_full,62.21159485521645,62.31673565345384,-0.10514079823739308
+4550,best_performer,no_source,-Source,Source,MedAE,minimize,phase4_nested_full,5.109210380622403,5.02014922298487,0.0890611576375333
+4550,best_performer,no_source,-Source,Source,R2,maximize,phase4_nested_full,0.0964360559790279,0.09339463510120054,0.0030414208778273555
+4550,best_performer,no_source,-Source,Source,RMSLE,minimize,phase4_nested_full,0.6606333220172902,0.6609583890390777,-0.00032506702178747293
+4550,best_performer,no_source,-Source,Source,RMSE_log,minimize,phase4_nested_full,0.6606333220172902,0.6609583890390777,-0.00032506702178747293
+4550,best_performer,no_source,-Source,Source,MAE_log,minimize,phase4_nested_full,0.5359575927310882,0.532871168078384,0.003086424652704256
+4550,best_performer,no_source,-Source,Source,R2_log,maximize,phase4_nested_full,0.6824254436263164,0.6811716516805336,0.0012537919457827895
+4550,best_performer,no_zone,-Zone,Zone,RMSE,minimize,phase4_nested_full,196.030056350284,190.6072605596142,5.422795790669824
+4550,best_performer,no_zone,-Zone,Zone,MAE,minimize,phase4_nested_full,63.81375210007104,62.31673565345384,1.4970164466172022
+4550,best_performer,no_zone,-Zone,Zone,MedAE,minimize,phase4_nested_full,5.119239189247543,5.02014922298487,0.09908996626267363
+4550,best_performer,no_zone,-Zone,Zone,R2,maximize,phase4_nested_full,0.0406905826029848,0.09339463510120054,-0.05270405249821574
+4550,best_performer,no_zone,-Zone,Zone,RMSLE,minimize,phase4_nested_full,0.6872319380608065,0.6609583890390777,0.026273549021728848
+4550,best_performer,no_zone,-Zone,Zone,RMSE_log,minimize,phase4_nested_full,0.6872319380608065,0.6609583890390777,0.026273549021728848
+4550,best_performer,no_zone,-Zone,Zone,MAE_log,minimize,phase4_nested_full,0.5629580417542677,0.532871168078384,0.030086873675883696
+4550,best_performer,no_zone,-Zone,Zone,R2_log,maximize,phase4_nested_full,0.6567055648627494,0.6811716516805336,-0.02446608681778417
+4550,best_performer,no_depth,-DEPTH,DEPTH,RMSE,minimize,phase4_nested_full,191.03997234300945,190.6072605596142,0.43271178339526273
+4550,best_performer,no_depth,-DEPTH,DEPTH,MAE,minimize,phase4_nested_full,62.6828598642879,62.31673565345384,0.36612421083405877
+4550,best_performer,no_depth,-DEPTH,DEPTH,MedAE,minimize,phase4_nested_full,4.924596706470784,5.02014922298487,-0.09555251651408536
+4550,best_performer,no_depth,-DEPTH,DEPTH,R2,maximize,phase4_nested_full,0.0936380826861316,0.09339463510120054,0.00024344758493105578
+4550,best_performer,no_depth,-DEPTH,DEPTH,RMSLE,minimize,phase4_nested_full,0.6682767420580215,0.6609583890390777,0.007318353018943791
+4550,best_performer,no_depth,-DEPTH,DEPTH,RMSE_log,minimize,phase4_nested_full,0.6682767420580215,0.6609583890390777,0.007318353018943791
+4550,best_performer,no_depth,-DEPTH,DEPTH,MAE_log,minimize,phase4_nested_full,0.540445168869395,0.532871168078384,0.007574000791011004
+4550,best_performer,no_depth,-DEPTH,DEPTH,R2_log,maximize,phase4_nested_full,0.6738976398767696,0.6811716516805336,-0.007274011803763969
+4550,best_performer,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",RMSE,minimize,phase4_nested_full,199.1007935729588,190.6072605596142,8.493533013344603
+4550,best_performer,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",MAE,minimize,phase4_nested_full,65.2038859568475,62.31673565345384,2.8871503033936605
+4550,best_performer,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",MedAE,minimize,phase4_nested_full,5.141642266460652,5.02014922298487,0.12149304347578216
+4550,best_performer,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",R2,maximize,phase4_nested_full,0.0175676578805719,0.09339463510120054,-0.07582697722062864
+4550,best_performer,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",RMSLE,minimize,phase4_nested_full,0.7169101524708344,0.6609583890390777,0.055951763431756785
+4550,best_performer,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",RMSE_log,minimize,phase4_nested_full,0.7169101524708344,0.6609583890390777,0.055951763431756785
+4550,best_performer,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",MAE_log,minimize,phase4_nested_full,0.5919098604410858,0.532871168078384,0.05903869236270187
+4550,best_performer,no_all_three,-all-three (DEPTH+Source+Zone),"DEPTH,Source,Zone",R2_log,maximize,phase4_nested_full,0.6304297964973024,0.6811716516805336,-0.050741855183231266

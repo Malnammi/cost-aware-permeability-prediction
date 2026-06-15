@@ -15,43 +15,43 @@
   "variant": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
   "hp_budget": 1000,
   "search_timing": {
-    "random_search_seconds": 808.7454268932343,
-    "bayesian_search_seconds": 1026.2572622299194,
-    "total_search_seconds": 1835.0026922225952,
+    "random_search_seconds": 778.8748826980591,
+    "bayesian_search_seconds": 1147.4104053974152,
+    "total_search_seconds": 1926.2852911949158,
     "n_random_trials": 500,
     "n_bayesian_trials": 500,
     "n_total_trials": 1000,
-    "avg_trial_seconds_random": 1.6174908537864685,
-    "avg_trial_seconds_bayesian": 2.052514524459839,
-    "avg_trial_seconds_overall": 1.8350026922225953
+    "avg_trial_seconds_random": 1.557749765396118,
+    "avg_trial_seconds_bayesian": 2.2948208107948305,
+    "avg_trial_seconds_overall": 1.9262852911949158
   },
-  "inner_best_score": -0.6558346426620466,
+  "inner_best_score": -0.6575711671079209,
   "inner_best_metrics": {
-    "RMSE": 165.8794210433943,
-    "MAE": 48.75038647553663,
-    "MedAE": 2.5170970541165842,
-    "R2": 0.0962568547565112,
-    "RMSLE": 0.6558346426620466,
-    "RMSE_log": 0.6558346426620466,
-    "MAE_log": 0.5219457046214491,
-    "R2_log": 0.7086362870032555
+    "RMSE": 165.94919262649412,
+    "MAE": 48.722245449941475,
+    "MedAE": 2.4517172299688847,
+    "R2": 0.09442239747385973,
+    "RMSLE": 0.6575711671079209,
+    "RMSE_log": 0.6575711671079209,
+    "MAE_log": 0.5237098561390299,
+    "R2_log": 0.707223711013277
   },
   "outer_metrics": {
-    "RMSE": 337.5088944692487,
-    "MAE": 142.31982954513308,
-    "MedAE": 18.7055272310087,
-    "R2": 0.12278779127864281,
-    "RMSLE": 0.6679341558190196,
-    "RMSE_log": 0.6679341558190196,
-    "MAE_log": 0.5619911048894782,
-    "R2_log": 0.5378693802483602
+    "RMSE": 335.920923926311,
+    "MAE": 142.35561422427264,
+    "MedAE": 18.693829994062718,
+    "R2": 0.13102289373689024,
+    "RMSLE": 0.6702408571270634,
+    "RMSE_log": 0.6702408571270634,
+    "MAE_log": 0.565905699707307,
+    "R2_log": 0.5346719452940574
   },
   "best_params": {
-    "n_estimators": 300,
-    "max_depth": null,
+    "max_depth": 20,
     "max_features": 0.5,
+    "min_samples_leaf": 2,
     "min_samples_split": 5,
-    "min_samples_leaf": 2
+    "n_estimators": 500
   },
-  "timestamp": "2026-04-16T01:51:58.795271"
+  "timestamp": "2026-06-04T14:37:47.618194"
 }

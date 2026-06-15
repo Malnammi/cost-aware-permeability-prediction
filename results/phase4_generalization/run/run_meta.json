@@ -3,12 +3,12 @@
   "model": "ExtraTrees",
   "variant": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
   "n_outer_folds": 1,
-  "n_candidate_subsets": 3,
+  "n_candidate_subsets": 4,
   "hp_budget": 1000,
-  "processed_fold_subset_pairs": 3,
+  "processed_fold_subset_pairs": 4,
   "skipped_fold_subset_pairs": 0,
-  "elapsed_seconds": 4926.932093143463,
+  "elapsed_seconds": 6935.462069988251,
   "nested_results_csv": "results/phase4_generalization/run/nested_outer_results.csv",
   "selection_trace_csv": "results/phase4_generalization/run/selection_trace.csv",
-  "timestamp": "2026-04-16T02:43:30.506260"
+  "timestamp": "2026-06-04T16:01:16.488122"
 }
