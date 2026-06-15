@@ -1,0 +1,21 @@
+{
+  "subset_id": 4096,
+  "subset_label": "cpor_sm_only_baseline",
+  "config_slug": "no_all_three",
+  "config_label": "-all-three (DEPTH+Source+Zone)",
+  "dropped": "DEPTH,Source,Zone",
+  "outer_fold": "B",
+  "outer_fold_index": 1,
+  "cost": 10,
+  "n_train": 1807,
+  "n_test": 477,
+  "seed": 20274307,
+  "RMSE": 114.61389014298803,
+  "MAE": 37.18250420140702,
+  "MedAE": 2.973795339477228,
+  "R2": 0.020269586360616043,
+  "RMSLE": 0.7149819837442345,
+  "RMSE_log": 0.7149819837442345,
+  "MAE_log": 0.5953163348993279,
+  "R2_log": 0.6867822652135156
+}

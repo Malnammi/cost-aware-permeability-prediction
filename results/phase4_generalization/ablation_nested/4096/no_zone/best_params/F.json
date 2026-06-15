@@ -1,0 +1,39 @@
+{
+  "subset_id": 4096,
+  "subset_label": "cpor_sm_only_baseline",
+  "config_slug": "no_zone",
+  "dropped": [
+    "Zone"
+  ],
+  "outer_fold": "F",
+  "seed": 20314307,
+  "best_params": {
+    "max_depth": 20,
+    "max_features": "sqrt",
+    "min_samples_leaf": 1,
+    "min_samples_split": 6,
+    "n_estimators": 1000
+  },
+  "best_score": -0.7248020258039877,
+  "best_metrics": {
+    "RMSE": 194.51135945027582,
+    "MAE": 64.29331271986064,
+    "MedAE": 5.74689675780957,
+    "R2": 0.004169135366923871,
+    "RMSLE": 0.7248020258039877,
+    "RMSE_log": 0.7248020258039877,
+    "MAE_log": 0.5896384518028798,
+    "R2_log": 0.6193356743196695
+  },
+  "timing": {
+    "random_search_seconds": 626.4729268550873,
+    "bayesian_search_seconds": 475.9164309501648,
+    "total_search_seconds": 1102.3893604278564,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.2529458537101745,
+    "avg_trial_seconds_bayesian": 0.9518328619003296,
+    "avg_trial_seconds_overall": 1.1023893604278565
+  }
+}
