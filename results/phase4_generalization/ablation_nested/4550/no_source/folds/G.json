@@ -1,0 +1,21 @@
+{
+  "subset_id": 4550,
+  "subset_label": "best_performer",
+  "config_slug": "no_source",
+  "config_label": "-Source",
+  "dropped": "Source",
+  "outer_fold": "G",
+  "outer_fold_index": 6,
+  "cost": 21,
+  "n_train": 2244,
+  "n_test": 40,
+  "seed": 20324761,
+  "RMSE": 108.86084545718914,
+  "MAE": 30.08661603275895,
+  "MedAE": 1.3887865663714796,
+  "R2": 0.005182641414282818,
+  "RMSLE": 0.7589467809313559,
+  "RMSE_log": 0.7589467809313559,
+  "MAE_log": 0.5912982081757676,
+  "R2_log": 0.5674173074760951
+}

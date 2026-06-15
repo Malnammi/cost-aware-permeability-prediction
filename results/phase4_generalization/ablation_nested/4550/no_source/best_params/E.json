@@ -1,0 +1,39 @@
+{
+  "subset_id": 4550,
+  "subset_label": "best_performer",
+  "config_slug": "no_source",
+  "dropped": [
+    "Source"
+  ],
+  "outer_fold": "E",
+  "seed": 20304761,
+  "best_params": {
+    "max_depth": null,
+    "max_features": 0.5,
+    "min_samples_leaf": 3,
+    "min_samples_split": 8,
+    "n_estimators": 500
+  },
+  "best_score": -0.6536433902289072,
+  "best_metrics": {
+    "RMSE": 166.3506459688336,
+    "MAE": 49.00178180182922,
+    "MedAE": 2.6720316663584724,
+    "R2": 0.0902231237038925,
+    "RMSLE": 0.6536433902289072,
+    "RMSE_log": 0.6536433902289072,
+    "MAE_log": 0.5271369270600107,
+    "R2_log": 0.7108004972250298
+  },
+  "timing": {
+    "random_search_seconds": 771.6959376335144,
+    "bayesian_search_seconds": 1038.2173657417297,
+    "total_search_seconds": 1809.91330575943,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.5433918752670288,
+    "avg_trial_seconds_bayesian": 2.0764347314834595,
+    "avg_trial_seconds_overall": 1.8099133057594299
+  }
+}

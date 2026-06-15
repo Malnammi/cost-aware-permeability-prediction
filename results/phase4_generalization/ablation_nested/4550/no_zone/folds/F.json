@@ -1,0 +1,21 @@
+{
+  "subset_id": 4550,
+  "subset_label": "best_performer",
+  "config_slug": "no_zone",
+  "config_label": "-Zone",
+  "dropped": "Zone",
+  "outer_fold": "F",
+  "outer_fold_index": 5,
+  "cost": 21,
+  "n_train": 1896,
+  "n_test": 388,
+  "seed": 20314761,
+  "RMSE": 237.03881742503248,
+  "MAE": 78.92817929649924,
+  "MedAE": 2.307102058751491,
+  "R2": 0.06805378711045584,
+  "RMSLE": 0.6776123901386127,
+  "RMSE_log": 0.6776123901386127,
+  "MAE_log": 0.5355113540399036,
+  "R2_log": 0.663918336676234
+}

@@ -1,0 +1,21 @@
+{
+  "subset_id": 4550,
+  "subset_label": "best_performer",
+  "config_slug": "no_depth",
+  "config_label": "-DEPTH",
+  "dropped": "DEPTH",
+  "outer_fold": "A",
+  "outer_fold_index": 0,
+  "cost": 21,
+  "n_train": 1928,
+  "n_test": 356,
+  "seed": 20264761,
+  "RMSE": 145.0087539695238,
+  "MAE": 48.30949422559407,
+  "MedAE": 3.4912151713600412,
+  "R2": 0.21100914366315549,
+  "RMSLE": 0.6351415966444393,
+  "RMSE_log": 0.6351415966444393,
+  "MAE_log": 0.5250939511231987,
+  "R2_log": 0.7387983420121693
+}
