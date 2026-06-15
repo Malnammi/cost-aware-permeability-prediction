@@ -1,0 +1,19 @@
+{
+  "mode": "phase4_baselines_outer_lowo",
+  "variant": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
+  "group_column": "Source",
+  "target_column": "CKHL_SM",
+  "n_rows": 2284,
+  "n_outer_folds": 7,
+  "baselines": [
+    "loglinear_cpor_sm",
+    "loglinear_phit",
+    "timur_cpor_sm_swt",
+    "timur_phit_swt"
+  ],
+  "baseline_outer_results_csv": "/home/moayad/predict-permeability/results/phase4_generalization/baselines/baseline_outer_results.csv",
+  "baseline_summary_csv": "/home/moayad/predict-permeability/results/phase4_generalization/baselines/baseline_summary.csv",
+  "predictions_dir": "/home/moayad/predict-permeability/results/phase4_generalization/baselines/predictions",
+  "elapsed_seconds": 0.13623404502868652,
+  "timestamp": "2026-06-07T23:20:13.219247"
+}
