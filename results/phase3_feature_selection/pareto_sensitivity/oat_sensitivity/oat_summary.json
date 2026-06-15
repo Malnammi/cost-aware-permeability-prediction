@@ -1,0 +1,15 @@
+{
+  "n_configurations": 63,
+  "baseline_cpor_cost": 10.0,
+  "cpor_breakpoint_cost": 1.0,
+  "cpor_breakpoint_fraction_of_baseline": 0.1,
+  "recommendations_always_on_frontier": {
+    "640": false,
+    "4096": true,
+    "4550": true
+  },
+  "split_always_holds": true,
+  "parameters_that_ever_disturb_a_recommendation": [
+    "CPOR_SM_standalone"
+  ]
+}

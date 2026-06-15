@@ -5,7 +5,7 @@
   "cost_mode": "bundled",
   "frontier_source": "retune",
   "random_state": 20260211,
-  "n_pareto_subsets": 12,
-  "elapsed_seconds": 7.266089916229248,
-  "timestamp": "2026-04-15T08:02:39.294241"
+  "n_pareto_subsets": 13,
+  "elapsed_seconds": 8.04570198059082,
+  "timestamp": "2026-06-05T00:02:57.119677"
 }

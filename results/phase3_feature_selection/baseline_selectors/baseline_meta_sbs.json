@@ -1,0 +1,47 @@
+{
+  "mode": "phase3_baselines",
+  "model": "ExtraTrees",
+  "variant": "dataset/prepared_variants/all_sources_without_outlier_adaptive.csv",
+  "cost_mode": "bundled",
+  "random_state": 20260211,
+  "hp_budget": 1000,
+  "selectors": [
+    "sbs"
+  ],
+  "selector_defaults": {
+    "shap_k": [
+      1,
+      2,
+      3,
+      6,
+      9,
+      12
+    ],
+    "corr_method": "spearman",
+    "corr_threshold": 0.1,
+    "corr_top_m": 6,
+    "sbs_sizes": [
+      1,
+      2,
+      3,
+      6,
+      9,
+      12
+    ]
+  },
+  "counts": {
+    "shap_topk": 0,
+    "corr_filter": 0,
+    "sbs": 6,
+    "total": 6
+  },
+  "outputs": {
+    "selected_subsets": "/home/moayad/predict-permeability/results/phase3_feature_selection/baseline_selectors/selected_subsets_sbs.json",
+    "csvs": {
+      "sbs": "/home/moayad/predict-permeability/results/phase3_feature_selection/baseline_selectors/sbs_results.csv"
+    },
+    "best_params_dir": "/home/moayad/predict-permeability/results/phase3_feature_selection/baseline_selectors/best_params"
+  },
+  "elapsed_seconds": 11700.034466266632,
+  "timestamp": "2026-06-06T03:52:37.791302"
+}

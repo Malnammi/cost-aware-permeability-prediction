@@ -1,0 +1,32 @@
+Phase 3 cost-sensitivity - baseline reproduction check
+========================================================
+Status: PASS
+Published frontier: /home/moayad/predict-permeability/results/phase3_feature_selection/pareto_sweep/pareto_frontier_RMSE_log.csv
+CPOR_SM frontier entry cost: 10.0
+
+[PASS] frontier_membership_exact
+        n_published: 15
+        n_recomputed: 15
+        missing_from_recomputed: []
+        extra_in_recomputed: []
+[PASS] recommended_640_on_frontier
+        label: PEF+PHIT (cost 7)
+[PASS] recommended_4096_on_frontier
+        label: CPOR_SM-only (cost 10)
+[PASS] recommended_4550_on_frontier
+        label: best-performance (cost 21)
+[PASS] cost_640_equals_7
+        expected: 7
+        actual: 7.0
+[PASS] cost_4096_equals_10
+        expected: 10
+        actual: 10.0
+[PASS] cost_4550_equals_21
+        expected: 21
+        actual: 21.0
+[PASS] two_regime_split_holds
+        holds: True
+        boundary_cost: 10.0
+        wireline_max_cost: 9.0
+        n_wireline: 6
+        n_cpor: 8

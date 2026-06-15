@@ -6,32 +6,32 @@
   ],
   "cost": 7,
   "best_params": {
-    "n_estimators": 200,
-    "max_depth": 30,
+    "max_depth": null,
     "max_features": 0.5,
-    "min_samples_split": 7,
-    "min_samples_leaf": 5
+    "min_samples_leaf": 3,
+    "min_samples_split": 10,
+    "n_estimators": 200
   },
-  "best_score": -0.8047444025607423,
+  "best_score": -0.8042450044286841,
   "best_metrics": {
-    "RMSE": 198.11790416512034,
-    "MAE": 67.0712819468819,
-    "MedAE": 7.590943400646339,
-    "R2": 0.05025917521290673,
-    "RMSLE": 0.8047444025607423,
-    "RMSE_log": 0.8047444025607423,
-    "MAE_log": 0.6526235927270976,
-    "R2_log": 0.5186155328995553
+    "RMSE": 197.0599357376862,
+    "MAE": 67.08593219625165,
+    "MedAE": 7.504841036939341,
+    "R2": 0.061301106102104264,
+    "RMSLE": 0.8042450044286841,
+    "RMSE_log": 0.8042450044286841,
+    "MAE_log": 0.6486232934403687,
+    "R2_log": 0.5172828404547273
   },
   "timing": {
-    "random_search_seconds": 881.0485751628876,
-    "bayesian_search_seconds": 764.6010644435883,
-    "total_search_seconds": 1645.6496415138245,
+    "random_search_seconds": 875.7111971378326,
+    "bayesian_search_seconds": 852.7185161113739,
+    "total_search_seconds": 1728.4297173023224,
     "n_random_trials": 500,
     "n_bayesian_trials": 500,
     "n_total_trials": 1000,
-    "avg_trial_seconds_random": 1.7620971503257752,
-    "avg_trial_seconds_bayesian": 1.5292021288871764,
-    "avg_trial_seconds_overall": 1.6456496415138244
+    "avg_trial_seconds_random": 1.7514223942756653,
+    "avg_trial_seconds_bayesian": 1.705437032222748,
+    "avg_trial_seconds_overall": 1.7284297173023224
   }
 }

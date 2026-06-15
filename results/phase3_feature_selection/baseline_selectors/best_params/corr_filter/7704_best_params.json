@@ -1,0 +1,41 @@
+{
+  "subset_id": 7704,
+  "features": [
+    "RHOB",
+    "NPHI",
+    "PHIT",
+    "DT",
+    "SWT",
+    "CPOR_SM"
+  ],
+  "cost": 27,
+  "best_params": {
+    "n_estimators": 800,
+    "max_depth": 20,
+    "max_features": 0.5,
+    "min_samples_split": 10,
+    "min_samples_leaf": 1
+  },
+  "best_score": -0.6956814552657369,
+  "best_metrics": {
+    "RMSE": 186.28960744258578,
+    "MAE": 62.53097108740208,
+    "MedAE": 5.648607379939798,
+    "R2": 0.14032052095364242,
+    "RMSLE": 0.6956814552657369,
+    "RMSE_log": 0.6956814552657369,
+    "MAE_log": 0.5568565243445477,
+    "R2_log": 0.6477630220450629
+  },
+  "timing": {
+    "random_search_seconds": 883.7600848674774,
+    "bayesian_search_seconds": 1340.97913980484,
+    "total_search_seconds": 2224.739227294922,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.7675201697349547,
+    "avg_trial_seconds_bayesian": 2.68195827960968,
+    "avg_trial_seconds_overall": 2.224739227294922
+  }
+}

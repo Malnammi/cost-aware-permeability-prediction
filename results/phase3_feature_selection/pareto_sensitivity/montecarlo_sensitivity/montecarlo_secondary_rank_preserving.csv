@@ -1,0 +1,15 @@
+parameter_set,scenario,tag,metric,value
+secondary,rank_preserving,,p_on_frontier_640,0.87895
+secondary,rank_preserving,,p_on_frontier_4096,1.0
+secondary,rank_preserving,,p_on_frontier_4550,1.0
+secondary,rank_preserving,,p_split_holds,1.0
+secondary,rank_preserving,,jaccard_median,0.5555555555555556
+secondary,rank_preserving,,jaccard_p5,0.4375
+secondary,rank_preserving,,jaccard_min,0.28125
+secondary,rank_preserving,,cpor_entry_cost_median,10.533104725606913
+secondary,rank_preserving,,cpor_entry_cost_p5,7.040800258422124
+secondary,rank_preserving,,cpor_entry_cost_p95,13.657564828044428
+secondary,rank_preserving,,n_requested,20000.0
+secondary,rank_preserving,,n_accepted,20000.0
+secondary,rank_preserving,,attempts,257725.0
+secondary,rank_preserving,,acceptance_rate,0.07760209525657193

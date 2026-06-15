@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "published_frontier": "/home/moayad/predict-permeability/results/phase3_feature_selection/pareto_sweep/pareto_frontier_RMSE_log.csv",
+  "cpor_entry_cost": 10.0,
+  "checks": [
+    {
+      "name": "frontier_membership_exact",
+      "pass": true,
+      "detail": {
+        "n_published": 15,
+        "n_recomputed": 15,
+        "missing_from_recomputed": [],
+        "extra_in_recomputed": []
+      }
+    },
+    {
+      "name": "recommended_640_on_frontier",
+      "pass": true,
+      "detail": {
+        "label": "PEF+PHIT (cost 7)"
+      }
+    },
+    {
+      "name": "recommended_4096_on_frontier",
+      "pass": true,
+      "detail": {
+        "label": "CPOR_SM-only (cost 10)"
+      }
+    },
+    {
+      "name": "recommended_4550_on_frontier",
+      "pass": true,
+      "detail": {
+        "label": "best-performance (cost 21)"
+      }
+    },
+    {
+      "name": "cost_640_equals_7",
+      "pass": true,
+      "detail": {
+        "expected": 7,
+        "actual": 7.0
+      }
+    },
+    {
+      "name": "cost_4096_equals_10",
+      "pass": true,
+      "detail": {
+        "expected": 10,
+        "actual": 10.0
+      }
+    },
+    {
+      "name": "cost_4550_equals_21",
+      "pass": true,
+      "detail": {
+        "expected": 21,
+        "actual": 21.0
+      }
+    },
+    {
+      "name": "two_regime_split_holds",
+      "pass": true,
+      "detail": {
+        "holds": true,
+        "boundary_cost": 10.0,
+        "wireline_max_cost": 9.0,
+        "n_wireline": 6,
+        "n_cpor": 8
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "subset_id": 4224,
+  "features": [
+    "PEF",
+    "CPOR_SM"
+  ],
+  "cost": 13,
+  "best_params": {
+    "max_depth": 30,
+    "max_features": 0.5,
+    "min_samples_leaf": 3,
+    "min_samples_split": 8,
+    "n_estimators": 300
+  },
+  "best_score": -0.6786207931183632,
+  "best_metrics": {
+    "RMSE": 192.36609427124728,
+    "MAE": 64.05905664710991,
+    "MedAE": 4.973343370925515,
+    "R2": 0.09051914844097045,
+    "RMSLE": 0.6786207931183632,
+    "RMSE_log": 0.6786207931183632,
+    "MAE_log": 0.5460873761262421,
+    "R2_log": 0.6649511178872645
+  },
+  "timing": {
+    "random_search_seconds": 890.1716187000275,
+    "bayesian_search_seconds": 912.7490916252136,
+    "total_search_seconds": 1802.9207127094269,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.780343237400055,
+    "avg_trial_seconds_bayesian": 1.8254981832504273,
+    "avg_trial_seconds_overall": 1.8029207127094269
+  }
+}

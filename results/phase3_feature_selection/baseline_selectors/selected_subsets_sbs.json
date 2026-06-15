@@ -1,0 +1,58 @@
+{
+  "sbs": [
+    {
+      "selector": "sbs",
+      "selector_param": "n_features=1",
+      "subset_id": 4096,
+      "features": "CPOR_SM",
+      "n_features": 1,
+      "cost": 10.0,
+      "sbs_selection_RMSE_log_mean": 0.739412922760068
+    },
+    {
+      "selector": "sbs",
+      "selector_param": "n_features=2",
+      "subset_id": 4224,
+      "features": "PEF,CPOR_SM",
+      "n_features": 2,
+      "cost": 13.0,
+      "sbs_selection_RMSE_log_mean": 0.6825591108017999
+    },
+    {
+      "selector": "sbs",
+      "selector_param": "n_features=3",
+      "subset_id": 5248,
+      "features": "PEF,DT,CPOR_SM",
+      "n_features": 3,
+      "cost": 18.0,
+      "sbs_selection_RMSE_log_mean": 0.6713125136443318
+    },
+    {
+      "selector": "sbs",
+      "selector_param": "n_features=6",
+      "subset_id": 5348,
+      "features": "DRHO,RT,CT,PEF,DT,CPOR_SM",
+      "n_features": 6,
+      "cost": 22.0,
+      "sbs_selection_RMSE_log_mean": 0.6598863275629862
+    },
+    {
+      "selector": "sbs",
+      "selector_param": "n_features=9",
+      "subset_id": 5621,
+      "features": "GR,DRHO,NPHI,RT,CT,PEF,MSFL,DT,CPOR_SM",
+      "n_features": 9,
+      "cost": 28.0,
+      "sbs_selection_RMSE_log_mean": 0.6665954635005148
+    },
+    {
+      "selector": "sbs",
+      "selector_param": "n_features=12",
+      "subset_id": 6143,
+      "features": "GR,CALI,DRHO,RHOB,NPHI,RT,CT,PEF,MSFL,PHIT,DT,CPOR_SM",
+      "n_features": 12,
+      "cost": 29.0,
+      "sbs_selection_RMSE_log_mean": 0.6711668101563583
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "shap_topk": [
+    {
+      "selector": "shap_topk",
+      "selector_param": "k=1",
+      "subset_id": 4096,
+      "features": "CPOR_SM",
+      "n_features": 1,
+      "cost": 10.0
+    },
+    {
+      "selector": "shap_topk",
+      "selector_param": "k=2",
+      "subset_id": 4608,
+      "features": "PHIT,CPOR_SM",
+      "n_features": 2,
+      "cost": 14.0
+    },
+    {
+      "selector": "shap_topk",
+      "selector_param": "k=3",
+      "subset_id": 4616,
+      "features": "RHOB,PHIT,CPOR_SM",
+      "n_features": 3,
+      "cost": 16.0
+    },
+    {
+      "selector": "shap_topk",
+      "selector_param": "k=6",
+      "subset_id": 7704,
+      "features": "RHOB,NPHI,PHIT,DT,SWT,CPOR_SM",
+      "n_features": 6,
+      "cost": 27.0
+    },
+    {
+      "selector": "shap_topk",
+      "selector_param": "k=9",
+      "subset_id": 8090,
+      "features": "CALI,RHOB,NPHI,PEF,MSFL,PHIT,DT,SWT,CPOR_SM",
+      "n_features": 9,
+      "cost": 32.0
+    },
+    {
+      "selector": "shap_topk",
+      "selector_param": "k=12",
+      "subset_id": 8187,
+      "features": "GR,CALI,RHOB,NPHI,RT,CT,PEF,MSFL,PHIT,DT,SWT,CPOR_SM",
+      "n_features": 12,
+      "cost": 31.0
+    }
+  ]
+}

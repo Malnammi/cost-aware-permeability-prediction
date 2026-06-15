@@ -1,0 +1,22 @@
+{
+  "corr_filter": [
+    {
+      "selector": "corr_filter",
+      "selector_param": "spearman|abs>=0.1",
+      "subset_id": 8093,
+      "features": "GR,DRHO,RHOB,NPHI,PEF,MSFL,PHIT,DT,SWT,CPOR_SM",
+      "n_features": 10,
+      "cost": 32.0,
+      "corr_method": "spearman"
+    },
+    {
+      "selector": "corr_filter",
+      "selector_param": "spearman|top_m=6",
+      "subset_id": 7704,
+      "features": "RHOB,NPHI,PHIT,DT,SWT,CPOR_SM",
+      "n_features": 6,
+      "cost": 27.0,
+      "corr_method": "spearman"
+    }
+  ]
+}
