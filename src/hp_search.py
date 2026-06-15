@@ -382,6 +382,11 @@ def random_search(
     phase_start = time.time()
     
     _default_kwargs = default_kwargs or {}
+    supports_random_state = False
+    try:
+        supports_random_state = "random_state" in model_class().get_params()
+    except Exception:
+        supports_random_state = False
     
     for trial_id, params in enumerate(param_sampler):
         try:
@@ -394,7 +399,7 @@ def random_search(
             if 'MLP' in model_name:
                 model_kwargs.setdefault('random_state', random_state)
                 model_kwargs.setdefault('max_iter', 500)
-            elif hasattr(model_class, 'random_state'):
+            elif supports_random_state:
                 model_kwargs.setdefault('random_state', random_state)
             
             model = model_class(**model_kwargs)
@@ -587,6 +592,11 @@ def bayesian_search(
                 print(f"  Successfully seeded {n_seeded} trials into TPE history")
     
     _default_kwargs = default_kwargs or {}
+    supports_random_state = False
+    try:
+        supports_random_state = "random_state" in model_class().get_params()
+    except Exception:
+        supports_random_state = False
     
     def objective(trial: optuna.Trial) -> float:
         """Objective function for Optuna."""
@@ -605,7 +615,7 @@ def bayesian_search(
             if 'MLP' in model_name:
                 model_kwargs.setdefault('random_state', random_state)
                 model_kwargs.setdefault('max_iter', 500)
-            elif hasattr(model_class, 'random_state'):
+            elif supports_random_state:
                 model_kwargs.setdefault('random_state', random_state)
             
             model = model_class(**model_kwargs)

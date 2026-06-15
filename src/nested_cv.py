@@ -130,6 +130,11 @@ def run_nested_lowo(
     - nested_outer_results.csv
     - selection_trace.csv
     - fold_artifacts/{fold}/{subset_id}.json
+    - predictions/{subset_id}/{fold}.csv (per-well actual-vs-predicted)
+
+    Predictions CSVs are written only for fold/subset pairs processed in the
+    current invocation. To backfill predictions for already-completed pairs,
+    re-run with resume=False.
     """
     project_root = Path(__file__).parent.parent
     features_info = load_features_info()
@@ -153,6 +158,7 @@ def run_nested_lowo(
     model_class, param_distributions, default_kwargs = get_model(model_name)
 
     unique_wells = sorted(df[group_col].unique())
+    fold_seed_index_map = {well: idx for idx, well in enumerate(unique_wells)}
     outer_splits = get_group_kfold_splits(
         df,
         group_col=group_col,
@@ -175,6 +181,8 @@ def run_nested_lowo(
     output_dir.mkdir(parents=True, exist_ok=True)
     fold_dir = output_dir / "fold_artifacts"
     fold_dir.mkdir(parents=True, exist_ok=True)
+    predictions_dir = output_dir / "predictions"
+    predictions_dir.mkdir(parents=True, exist_ok=True)
     nested_results_csv = output_dir / "nested_outer_results.csv"
     selection_trace_csv = output_dir / "selection_trace.csv"
 
@@ -205,6 +213,7 @@ def run_nested_lowo(
     for outer_idx, (train_idx, test_idx, fold_name) in enumerate(outer_splits):
         outer_train_df = df.iloc[train_idx].copy()
         outer_test_df = df.iloc[test_idx].copy()
+        fold_seed_index = fold_seed_index_map[fold_name]
 
         if verbose:
             print(
@@ -247,7 +256,7 @@ def run_nested_lowo(
                 binary_subset=binary_cols,
             )
 
-            seed = random_state + (outer_idx * 10000) + subset_id
+            seed = random_state + (fold_seed_index * 10000) + subset_id
             if verbose:
                 print(
                     f"  - subset {subset_id:4d} ({subset_label}), "
@@ -303,6 +312,25 @@ def run_nested_lowo(
                 y_pred=outer_pred_raw,
                 y_true_log=outer_y_test_log,
                 y_pred_log=outer_pred_log,
+            )
+
+            # Persist per-well actual-vs-predicted records for downstream visualization.
+            # Layout: predictions/{subset_id}/{fold_name}.csv. One CSV per held-out well so
+            # users can re-plot without re-running the nested LOWO sweep.
+            subset_pred_dir = predictions_dir / str(subset_id)
+            subset_pred_dir.mkdir(parents=True, exist_ok=True)
+            pred_record = {
+                "outer_fold": [fold_name] * len(outer_y_test_raw),
+                "row_index": outer_test_df.index.to_numpy(),
+                "y_true_raw": outer_y_test_raw,
+                "y_pred_raw": outer_pred_raw,
+                "y_true_log": outer_y_test_log,
+                "y_pred_log": outer_pred_log,
+            }
+            if "DEPTH" in outer_test_df.columns:
+                pred_record["DEPTH"] = outer_test_df["DEPTH"].to_numpy()
+            pd.DataFrame(pred_record).to_csv(
+                subset_pred_dir / f"{fold_name}.csv", index=False
             )
 
             row = {
