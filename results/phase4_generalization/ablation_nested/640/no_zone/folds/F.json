@@ -1,0 +1,21 @@
+{
+  "subset_id": 640,
+  "subset_label": "budget_wireline_only",
+  "config_slug": "no_zone",
+  "config_label": "-Zone",
+  "dropped": "Zone",
+  "outer_fold": "F",
+  "outer_fold_index": 5,
+  "cost": 7,
+  "n_train": 1896,
+  "n_test": 388,
+  "seed": 20310851,
+  "RMSE": 250.9162495572791,
+  "MAE": 82.89751494529732,
+  "MedAE": 1.819156470099555,
+  "R2": -0.044262011238271226,
+  "RMSLE": 0.7686975524524435,
+  "RMSE_log": 0.7686975524524435,
+  "MAE_log": 0.6044314551398324,
+  "R2_log": 0.5674930032391108
+}

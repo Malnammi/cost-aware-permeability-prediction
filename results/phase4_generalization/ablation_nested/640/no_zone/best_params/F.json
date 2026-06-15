@@ -1,0 +1,39 @@
+{
+  "subset_id": 640,
+  "subset_label": "budget_wireline_only",
+  "config_slug": "no_zone",
+  "dropped": [
+    "Zone"
+  ],
+  "outer_fold": "F",
+  "seed": 20310851,
+  "best_params": {
+    "max_depth": 10,
+    "max_features": 0.5,
+    "min_samples_leaf": 2,
+    "min_samples_split": 5,
+    "n_estimators": 100
+  },
+  "best_score": -0.8057062953002503,
+  "best_metrics": {
+    "RMSE": 195.45954696764286,
+    "MAE": 65.35199421507687,
+    "MedAE": 7.732627304444946,
+    "R2": 0.002199134406768055,
+    "RMSLE": 0.8057062953002503,
+    "RMSE_log": 0.8057062953002503,
+    "MAE_log": 0.6567453279420951,
+    "R2_log": 0.5154733544177029
+  },
+  "timing": {
+    "random_search_seconds": 705.7343058586121,
+    "bayesian_search_seconds": 1026.5013904571533,
+    "total_search_seconds": 1732.235699892044,
+    "n_random_trials": 500,
+    "n_bayesian_trials": 500,
+    "n_total_trials": 1000,
+    "avg_trial_seconds_random": 1.4114686117172242,
+    "avg_trial_seconds_bayesian": 2.0530027809143068,
+    "avg_trial_seconds_overall": 1.732235699892044
+  }
+}

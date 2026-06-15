@@ -1,0 +1,41 @@
+{
+  "mode": "phase4_structural_covariate_ablation_nested",
+  "configs": [
+    {
+      "slug": "no_source",
+      "drop": [
+        "Source"
+      ]
+    },
+    {
+      "slug": "no_zone",
+      "drop": [
+        "Zone"
+      ]
+    },
+    {
+      "slug": "no_depth",
+      "drop": [
+        "DEPTH"
+      ]
+    },
+    {
+      "slug": "no_all_three",
+      "drop": [
+        "DEPTH",
+        "Source",
+        "Zone"
+      ]
+    }
+  ],
+  "subset_ids": [
+    640,
+    4096,
+    4550
+  ],
+  "full_reference": "results/phase4_generalization/run (canonical nested full)",
+  "nested_summary_csv": "results/phase4_generalization/ablation_nested/nested_summary.csv",
+  "nested_results_all_csv": "results/phase4_generalization/ablation_nested/nested_results_all.csv",
+  "n_summary_rows": 12,
+  "timestamp": "2026-06-06T02:29:25.654335"
+}
