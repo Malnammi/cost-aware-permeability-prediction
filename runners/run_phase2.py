@@ -171,13 +171,14 @@ def run_experiment(
     models: list = None,
     variants: list = None,
     output_dir: str = None,
-    verbose: bool = True
+    verbose: bool = True,
+    config_path: str = None
 ) -> list:
     """
     Run the full experiment for specified models and variants.
     
     Experiment parameters (n_folds, hp_budget, random_state) are loaded from
-    configs/experiment_config.json.
+    config_path when provided, otherwise from configs/experiment_config.json.
     
     Parameters
     ----------
@@ -189,6 +190,8 @@ def run_experiment(
         Output directory. Defaults to results/phase2_model_selection.
     verbose : bool
         Whether to print progress.
+    config_path : str, optional
+        Path to experiment config JSON. Defaults to configs/experiment_config.json.
         
     Returns
     -------
@@ -196,7 +199,7 @@ def run_experiment(
         List of result dictionaries.
     """
     # Load configs
-    experiment_config = load_experiment_config()
+    experiment_config = load_experiment_config(config_path)
     features_info = load_features_info()
     variant_paths = get_variant_paths(experiment_config)
     
@@ -333,7 +336,8 @@ def run_experiment(
 def main():
     parser = argparse.ArgumentParser(
         description="Phase 2 Model Selection - HP Search Experiment. "
-                    "Experiment parameters are loaded from configs/experiment_config.json."
+                    "Experiment parameters are loaded from --config if provided, "
+                    "otherwise from configs/experiment_config.json."
     )
     
     parser.add_argument(
@@ -359,6 +363,12 @@ def main():
         type=str,
         default=None,
         help="Output directory. Default: results/phase2_model_selection."
+    )
+    parser.add_argument(
+        "--config",
+        type=str,
+        default=None,
+        help="Path to experiment config JSON. Default: configs/experiment_config.json."
     )
     parser.add_argument(
         "--quiet", "-q",
@@ -391,7 +401,7 @@ def main():
         return
     
     if args.list_variants:
-        config = load_experiment_config()
+        config = load_experiment_config(args.config)
         variant_paths = get_variant_paths(config)
         print("Available variants:")
         for name, path in variant_paths.items():
@@ -399,8 +409,11 @@ def main():
         return
     
     if args.show_config:
-        config = load_experiment_config()
-        print("Experiment configuration (configs/experiment_config.json):")
+        config = load_experiment_config(args.config)
+        if args.config:
+            print(f"Experiment configuration ({args.config}):")
+        else:
+            print("Experiment configuration (configs/experiment_config.json):")
         for key, value in config.items():
             if not key.startswith("_"):
                 print(f"  {key}: {value}")
@@ -426,7 +439,8 @@ def main():
         models=models,
         variants=variants,
         output_dir=args.output_dir,
-        verbose=not args.quiet
+        verbose=not args.quiet,
+        config_path=args.config
     )
 
 

@@ -225,6 +225,39 @@ def load_retune_outputs(results_dir: Path) -> dict:
     return outputs
 
 
+def load_baseline_outputs(results_dir: Path) -> dict:
+    baseline_dir = results_dir / "baseline_selectors"
+    outputs: dict = {}
+
+    by_selector: dict[str, pd.DataFrame] = {}
+    combined: list[pd.DataFrame] = []
+    for selector in ("shap_topk", "corr_filter", "sbs"):
+        path = baseline_dir / f"{selector}_results.csv"
+        if path.exists():
+            df = pd.read_csv(path)
+            if "selector" not in df.columns:
+                df["selector"] = selector
+            by_selector[selector] = df
+            combined.append(df)
+
+    if by_selector:
+        outputs["by_selector"] = by_selector
+    if combined:
+        outputs["baseline_results"] = pd.concat(combined, ignore_index=True)
+
+    path = baseline_dir / "selected_subsets.json"
+    if path.exists():
+        with open(path, "r") as f:
+            outputs["selected_subsets"] = json.load(f)
+
+    path = baseline_dir / "baseline_meta.json"
+    if path.exists():
+        with open(path, "r") as f:
+            outputs["meta"] = json.load(f)
+
+    return outputs
+
+
 def load_validation_outputs(results_dir: Path) -> dict:
     val_dir = results_dir / "pareto_validation"
     outputs: dict = {}
@@ -414,6 +447,8 @@ def fig_pareto_frontier_retune(
     sweep_frontier: pd.DataFrame,
     retune_frontier: pd.DataFrame,
     fig_dir: Path,
+    baseline_results: Optional[pd.DataFrame] = None,
+    show_full_feature: bool = False,
 ) -> None:
     score_col = "RMSE_log_mean"
 
@@ -458,25 +493,76 @@ def fig_pareto_frontier_retune(
 
     _label_frontier_points(ax, rf, score_col)
 
-    full_n = sweep_results["n_features"].max()
-    full_mask = sweep_results["n_features"] == full_n
-    if full_mask.any():
-        full_row = sweep_results[full_mask].iloc[0]
-        ax.scatter(
-            [full_row["cost"]],
-            [full_row[score_col]],
-            s=120,
-            marker="*",
-            color="blue",
-            edgecolors="black",
-            linewidth=0.5,
-            zorder=6,
-            label="Full feature set",
-        )
+    if (
+        baseline_results is not None
+        and not baseline_results.empty
+        and {"cost", score_col}.issubset(baseline_results.columns)
+    ):
+        # (marker, color, label, size, zorder). Hollow faces + distinct sizes
+        # and z-orders so coincident baseline points (selectors agreeing on the
+        # same subset) remain visible instead of one hiding under another.
+        marker_map = {
+            "shap_topk": ("D", "darkorange", "SHAP top-k baselines", 90, 6),
+            "corr_filter": ("^", "seagreen", "Correlation-filter baselines", 130, 7),
+            "sbs": ("P", "mediumpurple", "SBS baselines", 70, 8),
+        }
+        bdf = baseline_results.copy()
+        if "selector" not in bdf.columns:
+            bdf["selector"] = "baseline"
+
+        for selector, group in bdf.groupby("selector", dropna=False):
+            marker, color, label, size, zo = marker_map.get(
+                str(selector), ("X", "black", f"{selector} baseline", 70, 6)
+            )
+            ax.scatter(
+                group["cost"],
+                group[score_col],
+                s=size,
+                marker=marker,
+                facecolors="none",
+                edgecolors=color,
+                linewidth=1.3,
+                zorder=zo,
+                label=label,
+            )
+
+            for _, row in group.iterrows():
+                selector_param = str(row.get("selector_param", "")).strip()
+                sid = int(row.get("subset_id", -1))
+                if selector_param:
+                    ann = selector_param.replace("spearman|", "").replace("pearson|", "")
+                else:
+                    ann = f"id={sid}"
+                ax.annotate(
+                    ann,
+                    (row["cost"], row[score_col]),
+                    fontsize=7,
+                    ha="left",
+                    va="bottom",
+                    xytext=(4, 4),
+                    textcoords="offset points",
+                )
+
+    if show_full_feature:
+        full_n = sweep_results["n_features"].max()
+        full_mask = sweep_results["n_features"] == full_n
+        if full_mask.any():
+            full_row = sweep_results[full_mask].iloc[0]
+            ax.scatter(
+                [full_row["cost"]],
+                [full_row[score_col]],
+                s=120,
+                marker="*",
+                color="blue",
+                edgecolors="black",
+                linewidth=0.5,
+                zorder=6,
+                label="Full feature set",
+            )
 
     ax.set_xlabel("Acquisition Cost")
     ax.set_ylabel("RMSE_log Mean (lower is better)")
-    ax.set_title("Pareto Frontier: Sweep vs Re-tuned (RMSE_log)")
+    ax.set_title("Cost vs RMSE_log: exhaustive frontier vs cheaper selectors")
     ax.legend(loc="best", fontsize=9)
 
     _save_fig(fig, fig_dir, "pareto_frontier_retune")
@@ -1075,17 +1161,20 @@ def run_analysis(
     shap_data = load_shap_outputs(results_dir)
     sweep_data = load_sweep_outputs(results_dir)
     retune_data = load_retune_outputs(results_dir)
+    baseline_data = load_baseline_outputs(results_dir)
     validation_data = load_validation_outputs(results_dir)
 
     has_shap = "global_importance" in shap_data
     has_sweep = "sweep_results" in sweep_data
     has_retune = "retune_results" in retune_data
+    has_baselines = "baseline_results" in baseline_data
     has_validation = "validation_results" in validation_data
 
     if verbose:
         print(f"  SHAP data:       {'yes' if has_shap else 'no'}")
         print(f"  Sweep data:      {'yes' if has_sweep else 'no'}")
         print(f"  Retune data:     {'yes' if has_retune else 'no'}")
+        print(f"  Baseline data:   {'yes' if has_baselines else 'no'}")
         print(f"  Validation data: {'yes' if has_validation else 'no'}")
 
     if not has_shap and not has_sweep:
@@ -1204,6 +1293,7 @@ def run_analysis(
                             sweep_frontier,
                             retune_data["frontier_retune"],
                             fig_dir,
+                            baseline_results=baseline_data.get("baseline_results"),
                         )
                         figure_paths["F5"] = (
                             fig_dir / "pdf" / "pareto_frontier_retune.pdf"

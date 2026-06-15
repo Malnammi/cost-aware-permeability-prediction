@@ -40,6 +40,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from scipy import stats
+from sklearn.model_selection import GroupKFold
 
 # - Constants -----------------------------------------------------------------
 
@@ -75,6 +76,64 @@ def resolve_metric_scope(metric_scope: str) -> tuple[list[str], list[str], str]:
 
 def scoped_stem(stem: str, metric_scope: str) -> str:
     return stem if metric_scope == DEFAULT_METRIC_SCOPE else f"{stem}_{metric_scope}"
+
+
+def build_fold_well_maps(
+    config: dict,
+    results_dir: Path,
+    group_col: str = "Source",
+) -> Dict[str, Dict[int, str]]:
+    """Map each variant's positional CV fold index to its held-out well.
+
+    Phase 2 stores per-fold metrics as ``fold_0..fold_6`` in scikit-learn's
+    native GroupKFold order, which balances fold sizes and is therefore NOT
+    alphabetical. The held-out well name is never recorded, so labelling fold
+    ``i`` as well ``chr(65 + i)`` (the previous behaviour) mislabels every
+    per-well table and figure. Here we replay the exact deterministic split
+    used during the run (``groups = df[group_col].values``; no rows are dropped
+    between the raw frame and the CV groups) to recover the true
+    ``fold index -> well`` map for each dataset variant.
+    """
+    maps: Dict[str, Dict[int, str]] = {}
+    variants = config.get("dataset_variants", {})
+    candidate_roots = [
+        Path(__file__).resolve().parent.parent,
+        Path(results_dir).resolve().parent.parent,
+        Path.cwd(),
+    ]
+    for variant, rel_path in variants.items():
+        path = next(
+            (root / rel_path for root in candidate_roots if (root / rel_path).exists()),
+            None,
+        )
+        if path is None:
+            print(f"Warning: variant file not found for fold map: {rel_path}")
+            continue
+        try:
+            groups = pd.read_csv(path, usecols=[group_col])[group_col].values
+        except Exception as exc:
+            print(f"Warning: could not read {path} for fold map: {exc}")
+            continue
+
+        n_groups = len(pd.unique(groups))
+        gkf = GroupKFold(n_splits=min(N_FOLDS, n_groups))
+        fold_well: Dict[int, str] = {}
+        for fold_idx, (_, test_idx) in enumerate(gkf.split(groups, groups=groups)):
+            held_out = pd.unique(groups[test_idx])
+            fold_well[fold_idx] = str(held_out[0])
+        maps[variant] = fold_well
+    return maps
+
+
+def _fold_well(
+    fold_well_maps: Optional[Dict[str, Dict[int, str]]],
+    variant: str,
+    fold: int,
+) -> str:
+    """Return the held-out well for (variant, fold), falling back to A-G order."""
+    if fold_well_maps and variant in fold_well_maps and fold in fold_well_maps[variant]:
+        return fold_well_maps[variant][fold]
+    return WELL_LABELS[fold]
 
 
 # - Data loading ---------------------------------------------------------------
@@ -321,6 +380,7 @@ def save_tables(
     metrics: list[str],
     metric_scope: str = DEFAULT_METRIC_SCOPE,
     top_n: int = 10,
+    fold_well_maps: Optional[Dict[str, Dict[int, str]]] = None,
 ) -> Dict[str, Path]:
     tables_dir = output_dir / "tables"
     tables_dir.mkdir(parents=True, exist_ok=True)
@@ -382,12 +442,17 @@ def save_tables(
                 continue
             trial = match.iloc[0]
             row: dict = {"variant": variant, "model": model}
-            for fold, well in zip(FOLD_IDS, WELL_LABELS):
+            for fold in FOLD_IDS:
+                well = _fold_well(fold_well_maps, variant, fold)
                 row[f"Well_{well}"] = trial.get(f"fold_{fold}_{metric}", np.nan)
             rows.append(row)
 
         if rows:
             t5_df = pd.DataFrame(rows)
+            ordered_cols = ["variant", "model"] + [
+                f"Well_{w}" for w in WELL_LABELS if f"Well_{w}" in t5_df.columns
+            ]
+            t5_df = t5_df[ordered_cols]
             metric_tag = metric.replace("_", "")
             t5_path = tables_dir / f"{scoped_stem(f'per_well_{metric_tag}', metric_scope)}.csv"
             t5_df.to_csv(t5_path, index=False)
@@ -443,6 +508,7 @@ def _fold_long_df(
     best_trials_df: pd.DataFrame,
     configs: list[list[str]],
     metric: str,
+    fold_well_maps: Optional[Dict[str, Dict[int, str]]] = None,
 ) -> pd.DataFrame:
     rows: list[dict] = []
     for variant, model in configs:
@@ -454,7 +520,8 @@ def _fold_long_df(
             continue
         trial = match.iloc[0]
         label = f"{model} ({_short_label(variant)})"
-        for fold, well in zip(FOLD_IDS, WELL_LABELS):
+        for fold in FOLD_IDS:
+            well = _fold_well(fold_well_maps, variant, fold)
             value = trial.get(f"fold_{fold}_{metric}", np.nan)
             if pd.notna(value):
                 rows.append(
@@ -483,6 +550,7 @@ def save_figures(
     diagnostic_metric: str = "RMSE_log",
     metric_scope: str = DEFAULT_METRIC_SCOPE,
     top_n: int = 10,
+    fold_well_maps: Optional[Dict[str, Dict[int, str]]] = None,
 ) -> Dict[str, Path]:
     _set_style()
     fig_dir = output_dir / "figures"
@@ -513,7 +581,9 @@ def save_figures(
         # Per-metric boxplot (Configuration Selection; same style as other levels)
         try:
             metric_configs = metric_sorted[["variant", "model"]].values.tolist()
-            long_df = _fold_long_df(best_trials_df, metric_configs, metric)
+            long_df = _fold_long_df(
+                best_trials_df, metric_configs, metric, fold_well_maps
+            )
             if not long_df.empty:
                 # Left-to-right order follows mean ranking (best -> worst).
                 label_order = metric_sorted["label"].tolist()
@@ -573,14 +643,20 @@ def save_figures(
                 trial = match.iloc[0]
                 hm_rows.append(
                     {
-                        f"Well {well}": trial.get(f"fold_{fold}_{metric}", np.nan)
-                        for fold, well in zip(FOLD_IDS, WELL_LABELS)
+                        f"Well {_fold_well(fold_well_maps, variant, fold)}": trial.get(
+                            f"fold_{fold}_{metric}", np.nan
+                        )
+                        for fold in FOLD_IDS
                     }
                 )
                 hm_labels.append(f"{model} ({_short_label(variant)})")
 
             if hm_rows:
                 hm_df = pd.DataFrame(hm_rows, index=hm_labels)
+                ordered_cols = [
+                    f"Well {w}" for w in WELL_LABELS if f"Well {w}" in hm_df.columns
+                ]
+                hm_df = hm_df[ordered_cols]
                 avg_row = hm_df.mean(axis=0)
                 avg_row.name = "Well Average"
                 hm_df = pd.concat([hm_df, avg_row.to_frame().T])
@@ -1289,6 +1365,16 @@ def run_analysis(
         print(f"  Level 2 top:    {l2_top}")
         print(f"  Level 3 winner: {best_model} on {best_variant}")
 
+    group_col = config.get("group_column", "Source") if config else "Source"
+    fold_well_maps = build_fold_well_maps(config, results_dir, group_col=group_col)
+    if verbose:
+        if fold_well_maps:
+            for variant, fmap in fold_well_maps.items():
+                order = ", ".join(fmap[i] for i in sorted(fmap))
+                print(f"  Fold->well [{variant}]: {order}")
+        else:
+            print("  Warning: no fold->well maps built; falling back to A-G order.")
+
     if verbose:
         print("\nSaving tables...")
     table_paths = save_tables(
@@ -1301,6 +1387,7 @@ def run_analysis(
         metrics=active_metrics,
         metric_scope=metric_scope,
         top_n=top_n_models,
+        fold_well_maps=fold_well_maps,
     )
 
     figure_paths: Dict[str, Path] = {}
@@ -1318,6 +1405,7 @@ def run_analysis(
             diagnostic_metric=diagnostic_metric,
             metric_scope=metric_scope,
             top_n=top_n_models,
+            fold_well_maps=fold_well_maps,
         )
 
     if verbose:
