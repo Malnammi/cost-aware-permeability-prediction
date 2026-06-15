@@ -1,0 +1,17 @@
+{
+  "n_folds": 7,
+  "group_column": "Source",
+  "hp_budget": 200,
+  "random_search_fraction": 0.5,
+  "bayesian_fraction": 0.5,
+  "random_state": 20260211,
+  "target_column": "CKHL_SM",
+  "dataset_variants": {
+    "synthetic_without_outlier_adaptive": "datasets/synthetic_without_outlier_adaptive.csv"
+  },
+  "_notes": {
+    "purpose": "Synthetic smoke-testing config for Phase 2.",
+    "hp_budget": "Lower default budget for quick checks. Increase if needed.",
+    "variant": "Uses the generated synthetic surrogate CSV in datasets/."
+  }
+}

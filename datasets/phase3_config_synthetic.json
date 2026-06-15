@@ -1,0 +1,74 @@
+{
+  "best_variant": "datasets/synthetic_without_outlier_adaptive.csv",
+  "best_model": "ExtraTrees",
+  "best_params_path": "results/phase2_model_selection_synthetic/hp_search/synthetic_without_outlier_adaptive_ExtraTrees_best_params.json",
+
+  "validation_variant": "datasets/synthetic_without_outlier_adaptive.csv",
+  "validation_model": "ExtraTrees",
+  "validation_params_path": "results/phase2_model_selection_synthetic/hp_search/synthetic_without_outlier_adaptive_ExtraTrees_best_params.json",
+
+  "cost_mode": "bundled",
+
+  "feature_costs": {
+    "DEPTH": 0,
+    "GR": 1,
+    "CALI": 1,
+    "DRHO": 2,
+    "RHOB": 2,
+    "NPHI": 2,
+    "RT": 2,
+    "CT": 2,
+    "PEF": 3,
+    "MSFL": 3,
+    "PHIT": 4,
+    "DT": 5,
+    "SWT": 6,
+    "CPOR_SM": 10
+  },
+
+  "feature_bundles": {
+    "DRHO": {"parents": ["RHOB"], "marginal_cost": 0},
+    "CT": {"parents": ["RT"], "marginal_cost": 0},
+    "PEF": {"parents": ["RHOB"], "marginal_cost": 1},
+    "PHIT": {"parents": ["RHOB", "NPHI"], "marginal_cost": 2},
+    "SWT": {"parents": ["RT", "PHIT"], "marginal_cost": 2}
+  },
+
+  "sweep_features": [
+    "GR", "CALI", "DRHO",
+    "RHOB", "NPHI", "RT", "CT",
+    "PEF", "MSFL", "PHIT", "DT",
+    "SWT", "CPOR_SM"
+  ],
+
+  "always_include": {
+    "categorical": ["Source", "Zone"],
+    "continuous": ["DEPTH"],
+    "binary": []
+  },
+
+  "feature_binary_map": {
+    "GR": [],
+    "CALI": [],
+    "DRHO": [],
+    "RHOB": [],
+    "NPHI": [],
+    "RT": ["RT_missing"],
+    "CT": ["CT_missing"],
+    "PEF": ["PEF_missing_source"],
+    "MSFL": ["MSFL_missing_source"],
+    "PHIT": [],
+    "DT": ["DT_missing_source"],
+    "SWT": ["SWT_missing"],
+    "CPOR_SM": []
+  },
+
+  "random_state": 20260211,
+  "retune_hp_budget": 200,
+
+  "_notes": {
+    "purpose": "Synthetic smoke-testing config for Phase 3.",
+    "retune_hp_budget": "Reduced budget for quick checks.",
+    "phase2_dependency": "Run Phase 2 synthetic ExtraTrees first to produce best_params_path."
+  }
+}
