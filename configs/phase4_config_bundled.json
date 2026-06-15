@@ -121,6 +121,25 @@
       "features": [
         "CPOR_SM"
       ]
+    },
+    {
+      "subset_id": 8191,
+      "label": "full_feature_baseline",
+      "features": [
+        "GR",
+        "CALI",
+        "DRHO",
+        "RHOB",
+        "NPHI",
+        "RT",
+        "CT",
+        "PEF",
+        "MSFL",
+        "PHIT",
+        "DT",
+        "SWT",
+        "CPOR_SM"
+      ]
     }
   ],
   "phase2_best_params_path": "results/phase2_model_selection/hp_search/without_outlier_adaptive_ExtraTrees_best_params.json",
